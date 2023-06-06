@@ -1,0 +1,68 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using AUSWebControlLibrary;
+using CONFDB.Entities;
+using CONFDB.Services;
+using CONFDB.Data;
+using CONFDB.Web.UI;
+
+/// <summary>
+/// Summary description for DepartmentHelper
+/// </summary>
+public class DepartmentHelper : Department
+{
+	public DepartmentHelper()
+	{
+		//
+		// TODO: Add constructor logic here
+		//
+	}
+
+
+
+    public void AddDepartment(string name)
+    {
+        UserLoggedIn ul = new UserLoggedIn();
+        DepartmentService ds = new DepartmentService();
+
+        Department d = new Department();
+        d.WholesalerId = ul.WholesalerID;
+        d.CustomerId = Int32.Parse(ul.CustomerID);
+        d.Name = name;
+        d.ParentId = null;
+
+        ds.Insert(d);
+    }
+
+    public TList<Department> GetAllDepartmentsForCustomer()
+    {
+        UserLoggedIn ul = new UserLoggedIn();
+        DepartmentService ds = new DepartmentService();
+
+        TList<Department> dlist = ds.GetByCustomerId(Int32.Parse(ul.CustomerID));
+        dlist.Sort("Name");
+
+        return dlist;
+    }
+
+    public void UpdateDepartment(int id, string name)
+    {
+        DepartmentService ds = new DepartmentService();
+        Department d = ds.GetById(id);
+        d.Name = name;
+        ds.Update(d);
+    }
+
+    public void DeleteDepartment(int id)
+    {
+        DepartmentService ds = new DepartmentService();
+        ds.Delete(id);
+    }
+}

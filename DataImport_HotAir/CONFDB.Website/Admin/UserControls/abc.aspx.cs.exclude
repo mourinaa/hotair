@@ -1,0 +1,100 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using CONFDB.Services;
+using CONFDB.Entities;
+using au.com.redbackconferencing.ws;
+
+public partial class Admin_abc : System.Web.UI.Page
+{
+    private string _CustomerID;
+
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        _CustomerID = "14"; //Get the CustomerID some way. Could be querystring
+        EmailTemplateUtil _etu = new EmailTemplateUtil();
+        DataSet ds = _etu.GetEmailTemplateInfo("0000000001");
+
+        //Try binding from code
+        if (!Page.IsPostBack)
+        {
+            BindData();
+        }
+        
+    }
+
+    /// <summary>
+    /// Used to bind the data for data sources and data controls.
+    /// </summary>
+    public void BindData()
+    {
+        //Setup the Custom Controls.
+        //DNISCustomer.CustomerID = _CustomerID;
+        //DNISCustomer.BindData();
+        //DnisService dnisservice = new DnisService();
+        //ddlDnis.DataSource = dnisservice.GetByWholesalerIdDDL(ConfigurationManager.AppSettings["WholesalerID"],null);
+        //ddlDnis.DataBind();
+        //TList<Dnis> tlDnis;
+        //Dnis oDNIS = new Dnis();
+        //dnisservice.DeepLoad()
+        //    GetByWholesalerId(ConfigurationManager.AppSettings["WholesalerID"]);
+
+        //oDNIS.Customer_DnisCollection[]
+        //Get by WholesalerID
+        //tlDnis = dnisservice.GetByWholesalerId(ConfigurationManager.AppSettings["WholesalerID"]);
+        //tlDnis.Sort("DnisTypeId, DisplayOrder");//case sensitive
+        //GridViewDnisWholesaler.DataSource = tlDnis;
+        //GridViewDnisWholesaler.DataBind();
+        //tlDnis = null;
+
+        //Get by CustomerID
+        //tlDnis = dnisservice.GetByCustomerIdFromCustomer_Dnis(14);
+        //tlDnis.Sort("DnisTypeId, DisplayOrder");//case sensitive
+        //GridViewDnisCustomer.DataSource = tlDnis;
+        //GridViewDnisCustomer.DataBind();
+        //tlDnis = null;
+
+        //Get by ModeratorID
+        //tlDnis = dnisservice.GetByModeratorIdFromModerator_Dnis(10);
+        //tlDnis.Sort("DnisTypeId, DisplayOrder");//case sensitive
+        //GridViewDnisModerator.DataSource = tlDnis;
+        //GridViewDnisModerator.DataBind();
+        //tlDnis = null;
+
+    }
+    private DataSet _ddlDataSet;
+    public DataSet GetDNISByDNISTypeID(string DNISTypeID)
+    {
+        DnisService _dnisService = new DnisService();
+        return _dnisService.GetByWholesalerIdDDL(ConfigurationManager.AppSettings["WholesalerID"], Convert.ToInt32(DNISTypeID));
+    }
+   /// <summary>
+    /// Save the DNIS info for the Customer when press the Save press. This piggybacks on the "Select" command of the GridView object.
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    protected void GridViewDnisCustomer_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        string DNISID = ((DropDownList)GridViewDnisCustomer.SelectedRow.FindControl("ddlDNIS")).SelectedItem.Value;
+        string DNISTypeID = ((Label)GridViewDnisCustomer.SelectedRow.FindControl("lblDNISTypeID")).Text;
+        _CustomerID = lblCustomerID.Text;
+        try
+        {
+            CustomerService CustService = new CustomerService();
+            CustService.UpdateDNIS(Convert.ToInt32(_CustomerID), Convert.ToInt32(DNISID), Convert.ToInt32(DNISTypeID),false);
+        }
+        catch (Exception ex)
+        {
+
+            throw ex;
+        }
+    }
+}

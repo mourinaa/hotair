@@ -1,0 +1,32 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using CONFDB.Services;
+using CONFDB.Entities;
+
+public partial class Admin_abcDeepLoad : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        ////Test deepload of Products to ProductRateValue
+        //ProductRateValueService prvs = new ProductRateValueService();
+        ////TList<ProductRateValue> tprv = prvs.DeepLoadByProductRateIdDefaultOption(1, 1,true,CONFDB.Data.DeepLoadType.IncludeChildren,
+        ////    new Type[] { typeof(ProductRate), typeof(Product) });
+
+        //ProductRateValue prv = new ProductRateValue();
+        //prv.DefaultOption = 1;
+
+        //TList<ProductRateValue> tprv = prvs.DeepLoad(prv,true, CONFDB.Data.DeepLoadType.IncludeChildren,
+        //    new Type[] { typeof(ProductRate), typeof(Product) });
+
+        //GridView1.DataSource = tprv;
+        //GridView1.DataBind();
+    }
+}

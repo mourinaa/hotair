@@ -1,0 +1,7 @@
+﻿div.clear
+{
+    clear: both;
+    height: 0;
+    width: 100%;
+    float: none !important;
+}

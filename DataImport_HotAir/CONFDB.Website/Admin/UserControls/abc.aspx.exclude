@@ -1,0 +1,156 @@
+<%@ Page Language="C#" MasterPageFile="~/MasterPages/admin.master" AutoEventWireup="true" CodeFile="abc.aspx.cs" Inherits="Admin_abc" Title="Untitled Page" %>
+<%@ Register Src="~/Admin/CustomControls/DNISGridWS.ascx" TagName="DNISGridWS" TagPrefix="uc1" %>
+<%@ Register Src="~/Admin/CustomControls/DNISCustomer.ascx" TagName="DNISCustomer" TagPrefix="uc1" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">ABC Test Page 
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<p>CUSTOMER DEEPLOAD TO COMPANY EXAMPLE:</p>
+
+<p>DNIS EXAMPLES: Get By WholesalerID - User Control Version</p>
+
+<%--        <uc1:DNISGridWS id="DNISGridWS1" runat="server"></uc1:DNISGridWS>
+--%>
+<p>Get By CustomerID </p>
+        <%--Hidden control used to pass value to NetTiers Typed DataSource control.--%>
+        <asp:Label Visible="false" ID="lblCustomerID" runat="server"/>
+
+		<data:EntityGridView ID="GridViewDnisCustomer" runat="server"
+			AutoGenerateColumns="False"
+			DataSourceID="DnisDataSourceCustomer"
+			DataKeyNames="Id"
+			AllowMultiColumnSorting="false"
+			ExcelExportFileName="Export_Dnis.xls" OnSelectedIndexChanged="GridViewDnisCustomer_SelectedIndexChanged"
+			>
+			<Columns>
+				<asp:CommandField ShowSelectButton="True" SelectText="Save" />
+				<data:HyperLinkField HeaderText="Dnis Type" DataContainer="DnisTypeIdSource" DataTextField="Name" />
+				<asp:TemplateField HeaderText="DNIS">
+                    <ItemTemplate>                 
+                        <asp:DropDownList ID="ddlDNIS" runat="server" DataSource='<%# GetDNISByDNISTypeID(Eval("DnisTypeID").ToString()) %>' DataValueField="DNISID" DataTextField="DDLInfo" SelectedValue='<%# Eval("ID").ToString() %>' />
+                        <%# Eval("ID").ToString() %>
+                        <asp:Label Visible="false" ID="lblDNISTypeID" runat="server" Text='<%# Eval("DnisTypeID") %>'/> <%--Hidden value used in Update--%>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <data:BoundEntityDropDownField HeaderText="DNIS2" DataField="ID" DataSourceID="dsDNIS" DataTextField="DialNumber" DataValueField="ID" />
+    			<data:BoundEntityDropDownField ReadOnly="True" HeaderText="Call Flow" DataField="CallFlowId" DataSourceID="CallFlowDataSource" DataTextField="Name" DataValueField="Id" />
+				<data:BoundEntityDropDownField ReadOnly="True" HeaderText="Prompt Set" DataField="PromptSetId" DataSourceID="PromptSetDataSource" DataTextField="Name" DataValueField="Id" />
+			</Columns>
+			<EmptyDataTemplate>
+				<b>No Dnis Found! </b>
+			</EmptyDataTemplate>
+		</data:EntityGridView>	
+	    <data:DnisDataSource ID="dsDNIS" runat="server" SelectMethod="GetAll"></data:DnisDataSource>			
+		
+		<data:DnisDataSource ID="DnisDataSourceCustomer" runat="server" SelectMethod="GetByCustomerIdFromCustomer_Dnis"
+			EnableDeepLoad="True"
+			>
+			<DeepLoadProperties Method="IncludeChildren" Recursive="False">
+	            <Types>
+					<data:DnisProperty Name="DnisType"/> 
+					<data:DnisProperty Name="PromptSet"/> 
+					<data:DnisProperty Name="CallFlow"/>
+					<%--<data:DnisProperty Name="CustomerIdCustomerCollection_From_Customer_Dnis" />--%>
+					<%--<data:DnisProperty Name="Moderator_DnisCollection" /> //Load data from Mod/Dnis table by DNISID --%>
+					<%--<data:DnisProperty Name="ModeratorIdModeratorCollection_From_Moderator_Dnis" />--%>
+					<%--<data:DnisProperty Name="Customer_DnisCollection" />--%><%--//Load data from Cust/Dnis table by DNISID--%>
+				</Types>
+			</DeepLoadProperties>
+			
+		    <Parameters>
+		        <%--NetTiers Controls don't handle the <%# this.CustomerID %> syntax correctly used a ControlParameter so use a hidden control.--%>
+		        <%--<asp:ControlParameter Name="CustomerId" ControlID="lblCustomerID" PropertyName="Text" Type="int32" />--%>
+		        <data:CustomParameter Name="CustomerId" Value='14' Type="int32" ConvertEmptyStringToNull="false" />
+				<data:CustomParameter Name="OrderBy" Value="DNISTypeID, DisplayOrder" ConvertEmptyStringToNull="false" />
+		    </Parameters>
+		</data:DnisDataSource>	
+
+
+<p>Get By ModeratorID</p>
+DNIS DDL: 
+		<data:EntityGridView ID="GridViewDnisModerator" runat="server"
+			AutoGenerateColumns="False"					
+			DataSourceID="DnisDataSourceModerator"
+			DataKeyNames="Id"
+			AllowMultiColumnSorting="false"
+			ExcelExportFileName="Export_Dnis.xls"
+			>
+			<Columns>
+			<%--Force buttons to read-only when not in the right role--%>
+				<asp:CommandField ShowEditButton="True" />
+				<data:HyperLinkField HeaderText="Dnis Type" DataContainer="DnisTypeIdSource" DataTextField="Name" />
+				<asp:BoundField DataField="DnisNumber" HeaderText="Dnis Number" SortExpression="[DNISNumber]" />				
+				<asp:BoundField DataField="DialNumber" HeaderText="Dial Number" SortExpression="[DialNumber]" />				
+				<asp:BoundField DataField="Description" HeaderText="Description" SortExpression="[Description]" />
+				<data:BoundRadioButtonField DataField="Enabled" HeaderText="Enabled" SortExpression="[Enabled]"   />				
+				<data:BoundEntityDropDownField HeaderText="Access Type" DataField="AccessTypeId" DataSourceID="AccessTypeDataSource" DataTextField="Name" DataValueField="Id" />
+				<asp:BoundField DataField="DisplayOrder" HeaderText="Display Order" SortExpression="[DisplayOrder]" />
+				<data:BoundRadioButtonField DataField="DefaultOption" HeaderText="Default Option" SortExpression="[DefaultOption]"/>				
+				<data:BoundEntityDropDownField ReadOnly="True" HeaderText="Call Flow" DataField="CallFlowId" DataSourceID="CallFlowDataSource" DataTextField="Name" DataValueField="Id" />
+				<data:BoundEntityDropDownField HeaderText="Prompt Set" DataField="PromptSetId" DataSourceID="PromptSetDataSource" DataTextField="Name" DataValueField="Id" />
+			</Columns>
+			<EmptyDataTemplate>
+				<b>No Dnis Found! </b>
+				<asp:HyperLink runat="server" ID="hypDnis" NavigateUrl="~/admin/DnisEdit.aspx">Add New</asp:HyperLink>
+			</EmptyDataTemplate>
+		</data:EntityGridView>					
+
+		<br />
+		<%--Hide the add new button if not in the correct role--%>
+		<asp:Button runat="server" ID="btnDnis" OnClientClick="javascript:location.href='DnisEdit.aspx'; return false;" Text="Add New"></asp:Button>
+
+       
+		<data:DnisDataSource ID="DnisDataSourceWholesaler" runat="server" SelectMethod="Find"
+			EnableDeepLoad="True"
+			>
+			<DeepLoadProperties Method="IncludeChildren" Recursive="False">
+	            <Types>
+					<data:DnisProperty Name="DnisType"/> 
+					<data:DnisProperty Name="AccessType"/> 
+					<data:DnisProperty Name="PromptSet"/> 
+					<data:DnisProperty Name="CallFlow"/>
+					<%--<data:DnisProperty Name="CustomerIdCustomerCollection_From_Customer_Dnis" />--%>
+					<%--<data:DnisProperty Name="Moderator_DnisCollection" /> //Load data from Mod/Dnis table by DNISID --%>
+					<%--<data:DnisProperty Name="ModeratorIdModeratorCollection_From_Moderator_Dnis" />--%>
+					<%--<data:DnisProperty Name="Customer_DnisCollection" //Load data from Cust/Dnis table by DNISID/>--%>
+				</Types>
+			</DeepLoadProperties>
+			
+		    <Parameters>
+				<data:SqlParameter Name="Parameters">
+					<Filters>
+						<data:DnisFilter  Column="WholesalerId" DefaultValue="<%$ AppSettings:WholesalerID %>"/> 
+					</Filters>
+				</data:SqlParameter>
+				<data:CustomParameter Name="OrderBy" Value="DNISTypeID, DisplayOrder" ConvertEmptyStringToNull="false" />
+		    </Parameters>
+		</data:DnisDataSource>		
+
+		<data:DnisDataSource ID="DnisDataSourceModerator" runat="server" SelectMethod="GetByModeratorIdFromModerator_Dnis"
+			EnableDeepLoad="True"
+			>
+			<DeepLoadProperties Method="IncludeChildren" Recursive="False">
+	            <Types>
+					<data:DnisProperty Name="DnisType"/> 
+					<data:DnisProperty Name="AccessType"/> 
+					<data:DnisProperty Name="PromptSet"/> 
+					<data:DnisProperty Name="CallFlow"/>
+					<%--<data:DnisProperty Name="CustomerIdCustomerCollection_From_Customer_Dnis" />--%>
+					<%--<data:DnisProperty Name="Moderator_DnisCollection" /> //Load data from Mod/Dnis table by DNISID --%>
+					<%--<data:DnisProperty Name="ModeratorIdModeratorCollection_From_Moderator_Dnis" />--%>
+					<%--<data:DnisProperty Name="Customer_DnisCollection" />--%><%--//Load data from Cust/Dnis table by DNISID--%>
+				</Types>
+			</DeepLoadProperties>
+			
+		    <Parameters>
+		        <data:CustomParameter Name="ModeratorId" Value="10" Type="int32" ConvertEmptyStringToNull="false" />
+				<data:CustomParameter Name="OrderBy" Value="DNISTypeID, DisplayOrder" ConvertEmptyStringToNull="false" />
+		    </Parameters>
+		</data:DnisDataSource>		
+
+        <data:AccessTypeDataSource ID="AccessTypeDataSource" runat="server" SelectMethod="GetAll" CacheDuration="5" EnableCaching="true"/>
+        <data:CallFlowDataSource ID="CallFlowDataSource" runat="server" SelectMethod="GetAll" CacheDuration="5" EnableCaching="true"/>
+        <data:PromptSetDataSource ID="PromptSetDataSource" runat="server" SelectMethod="GetAll" CacheDuration="5" EnableCaching="true"/>
+
+</asp:Content>
+

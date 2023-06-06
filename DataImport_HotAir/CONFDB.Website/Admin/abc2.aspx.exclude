@@ -1,0 +1,107 @@
+<%@ Page Language="C#" MasterPageFile="~/MasterPages/admin.master" AutoEventWireup="true" CodeFile="abc2.aspx.cs" Inherits="Admin_abc2" Title="Untitled Page" %>
+<%@ Register Src="~/Admin/CustomControls/DNISCustomer.ascx" TagName="DNISCustomer" TagPrefix="uc1" %>
+<%@ Register Src="~/Admin/CustomControls/DNISModerator.ascx" TagName="DNISModerator" TagPrefix="uc1" %>
+<%@ Register Src="~/Admin/CustomControls/ProductRatesCustomer.ascx" TagName="ProductRatesCustomer" TagPrefix="uc1" %>
+<%@ Register Src="~/Admin/CustomControls/ProductRatesWS.ascx" TagName="ProductRatesWS" TagPrefix="uc1" %>
+<%@ Register Src="~/Admin/CustomControls/FeaturesWS.ascx" TagName="FeaturesWS" TagPrefix="uc1" %>
+<%@ Register Src="~/Admin/CustomControls/FeaturesCustomer.ascx" TagName="FeaturesCustomer" TagPrefix="uc1" %>
+<%@ Register Src="~/Admin/CustomControls/FeaturesModerator.ascx" TagName="FeaturesModerator" TagPrefix="uc1" %>
+
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">Test Out User Controls and Other Coding Ideas.
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<p>Features/Options - User Control Version</p>
+    <p>Wholesaler Features/Options</p>
+    <uc1:FeaturesWS id="ucFeaturesWS" runat="server"></uc1:FeaturesWS>    
+
+    <p>Customer Features/Options</p>
+    <uc1:FeaturesCustomer id="ucFeaturesCustomer" runat="server"></uc1:FeaturesCustomer>    
+
+    <p>Moderator Features/Options</p>
+    <uc1:FeaturesModerator id="ucFeaturesModerator" runat="server"></uc1:FeaturesModerator>    
+
+<p>Wholesaler Product Rates - DataSet Version</p>
+
+<p> NOTES: Used the EntityGridView with a DataSet means you have to override/handle all the different events i.e. Paging, Sorting, Update, etc.
+This was done for the Wholesaler and Customer Product Rate Custom Controls. 
+        </p>
+    		<data:EntityGridView ID="GridViewProductRateValue" runat="server"
+			AutoGenerateColumns="False"					
+			DataKeyNames="ProductRateValueID"
+			AllowMultiColumnSorting="false"
+			DefaultSortColumnName="" 
+			DefaultSortDirection="Ascending"	
+			ExcelExportFileName="Export_ProductRateValue.xls"
+			PageSize="10"
+			>
+			<Columns>
+				<asp:CommandField ShowSelectButton="False" ShowEditButton="True" />
+				<asp:BoundField DataField="Wholesaler_ProductName" HeaderText="Product" />				
+				<asp:BoundField DataField="ProductRateDisplayName" HeaderText="Product Rate" />				
+				<asp:BoundField DataField="ProductRateValueSellRate" HeaderText="Sell Rate" />				
+				<asp:BoundField DataField="ProductRateValueSellRateCurrencyID" HeaderText="Sell Rate Currency"  />				
+				<asp:BoundField DataField="ProductRateTypeDisplayName" HeaderText="Product Rate Type"  />				
+            </Columns>
+			<EmptyDataTemplate>
+				<b>No Product Rate Value Found! </b>
+				<%--<asp:HyperLink runat="server" ID="hypProductRateValue" NavigateUrl="~/admin/ProductRateValueEdit.aspx">Add New</asp:HyperLink>--%>
+			</EmptyDataTemplate>
+		</data:EntityGridView>					
+		
+<p>Wholesaler Product Rates - Object Datasource</p>
+<p> NOTES:     Paging on the ODS need to be 'false' as the Customer Stored Proc doesn't have the parm's it needs,
+        so we look at the ODS and set the record count in the GridView and use the GridViews Paging.
+        It means more calls to the DB but it works with min. coding.
+        </p>
+<%--			Visible='<%# (FormView1.DefaultMode == FormViewMode.Insert) ? false : true %>'	--%>
+
+    		<data:EntityGridView ID="EntityGridView1" runat="server"
+			AutoGenerateColumns="False"
+			DataSourceID="dsGetProductRates"
+			DataKeyNames="ProductRateValueID"
+			AllowMultiColumnSorting="False" 
+			DefaultSortDirection="Ascending"	
+			PageSelectorPageSizeInterval="20" RecordsCount="0"
+			PageSize="20" OnDataBound="EntityGridView1_DataBound"
+			>
+			<Columns>
+				<asp:CommandField ShowEditButton="True" />
+				<asp:BoundField DataField="Wholesaler_ProductName" ReadOnly="True" HeaderText="Product" />				
+				<asp:BoundField DataField="ProductRateDisplayName" ReadOnly="True" HeaderText="Product Rate" />				
+				<asp:BoundField DataField="ProductRateValueSellRate" HeaderText="Sell Rate" />				
+				<asp:BoundField DataField="ProductRateValueSellRateCurrencyID" ReadOnly="True" HeaderText="Sell Rate Currency"  />				
+				<asp:BoundField DataField="ProductRateTypeDisplayName" ReadOnly="True" HeaderText="Product Rate Type"  />				
+            </Columns>
+			<EmptyDataTemplate>
+				<b>No Product Rate Value Found! </b>
+				<%--<asp:HyperLink runat="server" ID="hypProductRateValue" NavigateUrl="~/admin/ProductRateValueEdit.aspx">Add New</asp:HyperLink>--%>
+			</EmptyDataTemplate>
+		</data:EntityGridView>
+			
+        <asp:ObjectDataSource ID="dsGetProductRates" runat="server" TypeName="CONFDB.Services.WholesalerService" 
+			SelectMethod="GetProductRates"
+			EnablePaging="False" OnSelected="dsGetProductRates_Selected" >
+            <SelectParameters>
+                <asp:Parameter Name="wholesalerId" Type="String" DefaultValue="<%$ AppSettings:WholesalerID %>" />
+            </SelectParameters>
+        </asp:ObjectDataSource>				
+
+<p>Get WholesalerID Product Rates - User Control Version</p>
+
+        <uc1:ProductRatesWS id="ucProductRatesWS" runat="server"></uc1:ProductRatesWS>
+
+<p>Get CustomerID Product Rates - User Control Version</p>
+
+        <uc1:ProductRatesCustomer id="ucProductRatesCustomer" runat="server"></uc1:ProductRatesCustomer>
+		
+<p>Get By CustomerID - User Control Version</p>
+
+        <uc1:DNISCustomer id="ucDNISCustomer" runat="server"></uc1:DNISCustomer>
+
+<p>Get By ModeratorID - User Control Version</p>
+
+        <uc1:DNISModerator id="ucDNISModerator" runat="server"></uc1:DNISModerator>
+
+</asp:Content>
+

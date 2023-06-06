@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="CONFDB_Full">
+</Property><Property Name="Solution File" Value="C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB_Full.sln">
+</Property><Property Name="Date" Value="Thursday, June 09, 2016">
+</Property><Property Name="Time" Value="10:47 AM">
+</Property><Property Name="Log Number" Value="6">
+</Property></Properties><Event ErrorLevel="0" Project="CONFDB.Entities" Source="CONFDB.Entities\CONFDB.Entities.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="CONFDB.Entities" Source="CONFDB.Entities\CONFDB.Entities.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="CONFDB.Data" Source="CONFDB.Data\CONFDB.Data.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="CONFDB.Data" Source="CONFDB.Data\CONFDB.Data.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="CONFDB.Data.SqlClient" Source="CONFDB.Data.SqlClient\CONFDB.Data.SqlClient.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="CONFDB.Data.SqlClient" Source="CONFDB.Data.SqlClient\CONFDB.Data.SqlClient.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="CONFDB.Services" Source="CONFDB.Services\CONFDB.Services.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="CONFDB.Services" Source="CONFDB.Services\CONFDB.Services.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="CONFDB.Web" Source="CONFDB.Web\CONFDB.Web.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="CONFDB.Web" Source="CONFDB.Web\CONFDB.Web.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="CONFDB_Full.sln" Description="The solution file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="" Source="CONFDB_Full.sln" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="CONFDB.Entities" Source="CONFDB.Entities\CONFDB.Entities.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="CONFDB.Data" Source="CONFDB.Data\CONFDB.Data.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="CONFDB.Data.SqlClient" Source="CONFDB.Data.SqlClient\CONFDB.Data.SqlClient.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="CONFDB.Services" Source="CONFDB.Services\CONFDB.Services.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="CONFDB.Web" Source="CONFDB.Web\CONFDB.Web.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

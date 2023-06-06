@@ -1,0 +1,107 @@
+﻿<%@ Page Language="C#" Theme="Default" MasterPageFile="~/MasterPages/admin.master" AutoEventWireup="true"  CodeFile="AdminSiteNotesTypeEdit.aspx.cs" Inherits="AdminSiteNotesTypeEdit" Title="AdminSiteNotesType Edit" %>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">Admin Site Notes Type - Add/Edit</asp:Content>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+		<data:MultiFormView ID="FormView1" DataKeyNames="Id" runat="server" DataSourceID="AdminSiteNotesTypeDataSource">
+		
+			<EditItemTemplatePaths>
+				<data:TemplatePath Path="~/Admin/UserControls/AdminSiteNotesTypeFields.ascx" />
+			</EditItemTemplatePaths>
+		
+			<InsertItemTemplatePaths>
+				<data:TemplatePath Path="~/Admin/UserControls/AdminSiteNotesTypeFields.ascx" />
+			</InsertItemTemplatePaths>
+		
+			<EmptyDataTemplate>
+				<b>AdminSiteNotesType not found!</b>
+			</EmptyDataTemplate>
+			
+			<FooterTemplate>
+				<asp:Button ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
+				<asp:Button ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
+				<asp:Button ID="CancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+			</FooterTemplate>
+
+		</data:MultiFormView>
+		
+		<data:AdminSiteNotesTypeDataSource ID="AdminSiteNotesTypeDataSource" runat="server"
+			SelectMethod="GetById"
+		>
+			<Parameters>
+				<asp:QueryStringParameter Name="Id" QueryStringField="Id" Type="String" />
+
+			</Parameters>
+		</data:AdminSiteNotesTypeDataSource>
+		
+		<br />
+
+		<asp:Panel ID="AdminSiteNotesPanel2" runat="server" CssClass="collapsePanelHeader"> 
+			<div style="padding:5px; cursor: pointer; vertical-align: middle;">
+				<div style="float: left; vertical-align: middle;"><asp:Image ID="AdminSiteNotesImage" runat="server" ImageUrl="~/images/expand_blue.jpg"/></div>
+				<div style="float: left; padding-left: 5px;">Admin Site Notes Details</div>
+				<div style="float: left; margin-left: 20px;"><asp:Label ID="AdminSiteNotesLabel" runat="server" /></div>
+			</div>
+		</asp:Panel>	
+		<asp:Panel ID="AdminSiteNotesPanel1" runat="server" CssClass="collapsePanel" Height="0">
+		<data:EntityGridView ID="GridViewAdminSiteNotes" runat="server"
+			AutoGenerateColumns="False"					
+			OnSelectedIndexChanged="GridViewAdminSiteNotes_SelectedIndexChanged"			 			 
+			DataSourceID="AdminSiteNotesDataSource1"
+			DataKeyNames="Id"
+			AllowMultiColumnSorting="false"
+			DefaultSortColumnName="" 
+			DefaultSortDirection="Ascending"	
+			ExcelExportFileName="Export_AdminSiteNotes.xls"  		
+			Visible='<%# (FormView1.DefaultMode == FormViewMode.Insert) ? false : true %>'	
+			>
+			<Columns>
+				<asp:CommandField ShowSelectButton="True" />
+				<asp:BoundField DataField="CustomerId" HeaderText="Customer Id" SortExpression="[CustomerID]" />				
+				<asp:BoundField DataField="UserId" HeaderText="User Id" SortExpression="[UserID]" />				
+				<asp:BoundField DataField="ModeratorId" HeaderText="Moderator Id" SortExpression="[ModeratorID]" />				
+				<asp:BoundField DataField="Notes" HeaderText="Notes" SortExpression="[Notes]" />				
+				<asp:BoundField DataField="ModifiedBy" HeaderText="Modified By" SortExpression="[ModifiedBy]" />				
+				<asp:BoundField DataField="CreatedDate" HeaderText="Created Date" SortExpression="[CreatedDate]" />				
+				<asp:BoundField DataField="ModifiedDate" HeaderText="Modified Date" SortExpression="[ModifiedDate]" />				
+				<asp:BoundField DataField="WholesalerId" HeaderText="Wholesaler Id" SortExpression="[WholesalerID]" />				
+				<asp:BoundField DataField="Deleted" HeaderText="Deleted" SortExpression="[Deleted]" />				
+				<data:HyperLinkField HeaderText="Admin Site Notes Type Id" DataNavigateUrlFormatString="AdminSiteNotesTypeEdit.aspx?Id={0}" DataNavigateUrlFields="Id" DataContainer="AdminSiteNotesTypeIdSource" DataTextField="Name" />
+			</Columns>
+			<EmptyDataTemplate>
+				<b>No Admin Site Notes Found! </b>
+				<asp:HyperLink runat="server" ID="hypAdminSiteNotes" NavigateUrl="~/admin/AdminSiteNotesEdit.aspx">Add New</asp:HyperLink>
+			</EmptyDataTemplate>
+		</data:EntityGridView>					
+		
+		<data:AdminSiteNotesDataSource ID="AdminSiteNotesDataSource1" runat="server" SelectMethod="Find"
+			EnableDeepLoad="True"
+			>
+			<DeepLoadProperties Method="IncludeChildren" Recursive="False">
+	            <Types>
+					<data:AdminSiteNotesProperty Name="AdminSiteNotesType"/> 
+					<%--<data:AdminSiteNotesProperty Name="AdminSiteNotesHistoryCollection" />--%>
+				</Types>
+			</DeepLoadProperties>
+			
+		    <Parameters>
+				<data:SqlParameter Name="Parameters">
+					<Filters>
+						<data:AdminSiteNotesFilter  Column="AdminSiteNotesTypeId" QueryStringField="Id" /> 
+					</Filters>
+				</data:SqlParameter>
+				<data:CustomParameter Name="OrderByClause" Value="" ConvertEmptyStringToNull="false" /> 
+		    </Parameters>
+		</data:AdminSiteNotesDataSource>		
+		
+		<br />
+		</asp:Panel>
+		
+<ajaxToolkit:CollapsiblePanelExtender ID="cpeAdminSiteNotes" runat="Server" TargetControlID="AdminSiteNotesPanel1"
+            ExpandControlID="AdminSiteNotesPanel2" CollapseControlID="AdminSiteNotesPanel2" Collapsed="True"
+            TextLabelID="AdminSiteNotesLabel" ExpandedText="(Hide Details...)" CollapsedText="(Show Details...)"
+            ImageControlID="AdminSiteNotesImage" ExpandedImage="~/images/collapse_blue.jpg" CollapsedImage="~/images/expand_blue.jpg"
+            SuppressPostBack="true"/>
+
+
+</asp:Content>
+

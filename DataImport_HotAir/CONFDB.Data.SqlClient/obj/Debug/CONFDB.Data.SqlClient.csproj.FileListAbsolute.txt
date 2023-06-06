@@ -1,0 +1,69 @@
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\AdminSite\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\AdminSite\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Data.SqlClient.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\AdminSite\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Data.SqlClient.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\AdminSite\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Data.SqlClient.xml
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\AdminSite\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Data.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\AdminSite\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Entities.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\AdminSite\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\AdminSite\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\AdminSite\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\AdminSite\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Entities.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\AdminSite\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Entities.xml
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\AdminSite\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Data.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\AdminSite\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Data.xml
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\AdminSite\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\obj\Debug\CONFDB.Data.SqlClient.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\AdminSite\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\obj\Debug\CONFDB.Data.SqlClient.pdb
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Data.SqlClient.dll
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Data.SqlClient.pdb
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Data.SqlClient.xml
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Data.dll
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Entities.dll
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.dll
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Entities.pdb
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Entities.xml
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Data.pdb
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Data.xml
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\obj\Debug\ResolveAssemblyReference.cache
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\obj\Debug\CONFDB.Data.SqlClient.dll
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Data.SqlClient\obj\Debug\CONFDB.Data.SqlClient.pdb
+C:\NetTiers\DataImport\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Data.SqlClient.dll
+C:\NetTiers\DataImport\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Data.SqlClient.pdb
+C:\NetTiers\DataImport\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Data.SqlClient.xml
+C:\NetTiers\DataImport\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Data.dll
+C:\NetTiers\DataImport\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Entities.dll
+C:\NetTiers\DataImport\CONFDB.Data.SqlClient\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\NetTiers\DataImport\CONFDB.Data.SqlClient\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\NetTiers\DataImport\CONFDB.Data.SqlClient\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+C:\NetTiers\DataImport\CONFDB.Data.SqlClient\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+C:\NetTiers\DataImport\CONFDB.Data.SqlClient\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+C:\NetTiers\DataImport\CONFDB.Data.SqlClient\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.dll
+C:\NetTiers\DataImport\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Entities.pdb
+C:\NetTiers\DataImport\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Entities.xml
+C:\NetTiers\DataImport\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Data.pdb
+C:\NetTiers\DataImport\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Data.xml
+C:\NetTiers\DataImport\CONFDB.Data.SqlClient\obj\Debug\ResolveAssemblyReference.cache
+C:\NetTiers\DataImport\CONFDB.Data.SqlClient\obj\Debug\CONFDB.Data.SqlClient.dll
+C:\NetTiers\DataImport\CONFDB.Data.SqlClient\obj\Debug\CONFDB.Data.SqlClient.pdb
+C:\NetTiers\DataImport_HotAir\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Data.SqlClient.dll
+C:\NetTiers\DataImport_HotAir\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Data.SqlClient.pdb
+C:\NetTiers\DataImport_HotAir\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Data.SqlClient.xml
+C:\NetTiers\DataImport_HotAir\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Data.dll
+C:\NetTiers\DataImport_HotAir\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Entities.dll
+C:\NetTiers\DataImport_HotAir\CONFDB.Data.SqlClient\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\NetTiers\DataImport_HotAir\CONFDB.Data.SqlClient\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\NetTiers\DataImport_HotAir\CONFDB.Data.SqlClient\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+C:\NetTiers\DataImport_HotAir\CONFDB.Data.SqlClient\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+C:\NetTiers\DataImport_HotAir\CONFDB.Data.SqlClient\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+C:\NetTiers\DataImport_HotAir\CONFDB.Data.SqlClient\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.dll
+C:\NetTiers\DataImport_HotAir\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Entities.pdb
+C:\NetTiers\DataImport_HotAir\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Entities.xml
+C:\NetTiers\DataImport_HotAir\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Data.pdb
+C:\NetTiers\DataImport_HotAir\CONFDB.Data.SqlClient\bin\Debug\CONFDB.Data.xml
+C:\NetTiers\DataImport_HotAir\CONFDB.Data.SqlClient\obj\Debug\ResolveAssemblyReference.cache
+C:\NetTiers\DataImport_HotAir\CONFDB.Data.SqlClient\obj\Debug\CONFDB.Data.SqlClient.dll
+C:\NetTiers\DataImport_HotAir\CONFDB.Data.SqlClient\obj\Debug\CONFDB.Data.SqlClient.pdb

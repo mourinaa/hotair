@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+<!--
+	Current Roles defined in the system:
+	ID	Name	UserLevel
+	1	Read Only	10
+	2	Moderator	20
+	3	Customer	30
+	4	Company Admin	40
+	5	Sales Agent	50
+	6	Sales Manager	60
+	7	Client Services	70
+	10	Finance	50 // Same as Sales Agent as they can't add or edit.
+	8	Management	80
+	9	Tech Admin	90
+
+Roles able to access the Admin Site are:
+Tech Admin,Management,Client Services,Sales Manager,Sales Agent,Read Only
+
+-->
+		<siteMapNode url="" title="Admin"  description="" roles="*">
+			<siteMapNode url="~/Admin/Default.aspx" title="Home"  description="Home" roles="*"/>  
+			<!--<siteMapNode url="~/Admin/AdminSiteNotes.aspx" title="Admin Site Notes"  description="" />
+			<siteMapNode url="~/Admin/AreaCodeNxx.aspx" title="Area Code Nxx"  description="" />
+			<siteMapNode url="~/Admin/AverageRates.aspx" title="Average Rates"  description="" />
+			<siteMapNode url="~/Admin/BillableLegs.aspx" title="Billable Legs"  description="" />-->
+			<siteMapNode url="" title="Customer Management" description="Used to setup customer related items." 
+				roles="Tech Admin,Management,Client Services,Sales Manager,Finance">
+				<siteMapNode url="~/Admin/Company.aspx" title="Company List"  description="" />
+				<siteMapNode url="~/Admin/Customer.aspx" title="Customer Admin List"  description="" />
+				<siteMapNode url="~/Admin/Conference.aspx" title="Conference List"  description="" />
+				<siteMapNode url="~/Admin/Moderator.aspx" title="Moderator List"  description="" />
+			</siteMapNode>
+      
+      <siteMapNode url="" title="Customer Management" description="Used to setup customer related items."
+				roles="Sales Agent">
+        <siteMapNode url="~/Admin/Customer.aspx?v=1" title="Customer Admin List"  description="" />
+        <siteMapNode url="~/Admin/Conference.aspx?v=1" title="Conference List"  description="" />
+        <siteMapNode url="~/Admin/Moderator.aspx?v=1" title="Moderator List"  description="" />
+      </siteMapNode>
+      
+			<siteMapNode url="" title="Sales Management" description="" roles="" >
+			</siteMapNode>
+			<siteMapNode url="" title="Accounting" description="" roles="Finance">
+				<siteMapNode url="~/Admin/PostTransactions.aspx?finance" title="Post Payments and Credits"  description="" />
+        <siteMapNode url="~/Admin/PostMiscellaneousCharges.aspx?finance" title="Post Miscellaneous Charges"  description="" />
+        <siteMapNode url="~/Admin/Reports/ReportCustomerTransactionList.aspx?finance" title="View Transactions"  description="" />
+				<siteMapNode url="~/Admin/Reports/Invoices.aspx?finance" title="Customer Admin Invoice"  description="" />
+				<siteMapNode url="~/Admin/Reports/ShowInvoices.aspx?finance" title="Get All Invoices"  description="" />
+				<siteMapNode url="~/Admin/Reports/QuickBooksExport.aspx?finance" title="QuickBooks Export"  description="" />
+        <siteMapNode url="~/Admin/Reports/XeroExport.aspx?finance" title="Xero Export"  description="" />
+      </siteMapNode>
+
+			<siteMapNode url="" title="Accounting" description="" roles="Tech Admin,Management">
+				<siteMapNode url="~/Admin/PostTransactions.aspx" title="Post Payments and Credits"  description="" />
+        <siteMapNode url="~/Admin/PostMiscellaneousCharges.aspx" title="Post Miscellaneous Charges"  description="" />
+        <siteMapNode url="~/Admin/Reports/ReportCustomerTransactionList.aspx" title="View Transactions"  description="" />
+				<siteMapNode url="~/Admin/Reports/Invoices.aspx" title="Customer Admin Invoice"  description="" />
+				<siteMapNode url="~/Admin/Reports/ShowInvoices.aspx" title="Get All Invoices"  description="" />
+				<siteMapNode url="~/Admin/BillingRun.aspx" title="Billing Run"  description="" />
+				<siteMapNode url="~/Admin/Reports/QuickBooksExport.aspx" title="QuickBooks Export"  description="" />
+        <siteMapNode url="~/Admin/Reports/XeroExport.aspx" title="Xero Export"  description="" />
+        <siteMapNode url="~/Admin/Reports/ReportManagedEventsSummary.aspx" title="Managed Events Summary Report"  description="" />
+      </siteMapNode>
+
+			<siteMapNode url="" title="Reports" description="" roles="Tech Admin,Management,Sales Manager,Sales Agent,Read Only,Finance" >
+				<siteMapNode url="~/Admin/Reports/CallDetails.aspx" title="Call Details"  description="" />
+				<!--<siteMapNode url="~/Admin/Reports/CallSummary.aspx" title="Call Summary"  description="" />-->
+				<siteMapNode url="~/Admin/Reports/ReportCommission.aspx" title="Commission Report"  description="" />
+				<siteMapNode url="~/Admin/Reports/ReportXTimeUsage.aspx" title="First / Third Time Usage Report"  description="" />
+				<siteMapNode url="~/Admin/Reports/ReportRevenue.aspx?sales" title="Revenue Report"  description="" />
+				<siteMapNode url="~/Admin/Reports/ReportRevenueExport.aspx?sales" title="Revenue Report Export"  description="" />
+        <siteMapNode url="~/Admin/Reports/ReportTrends.aspx" title="Trends Report"  description="" />
+      </siteMapNode>
+      
+      <siteMapNode url="" title="Reports" description="" roles="Client Services" >
+        <siteMapNode url="~/Admin/Reports/CallDetails.aspx?v=1" title="Call Details"  description="" />
+      </siteMapNode>
+      
+			<siteMapNode url="" title="Management Reports" description="" roles="Tech Admin,Management" >
+				<siteMapNode url="~/Admin/Reports/ReportRevenue.aspx" title="Revenue Report"  description="" />
+				<siteMapNode url="~/Admin/Reports/ReportRevenueExport.aspx" title="Revenue Report Export"  description="" />
+				<siteMapNode url="~/Admin/Reports/ReportWalletCards.aspx" title="Wallet Cards"  description="" />
+			</siteMapNode>
+      
+      <siteMapNode url="" title="Management Reports" description="" roles="Client Services" >
+        <siteMapNode url="~/Admin/Reports/ReportWalletCards.aspx?v=1" title="Wallet Cards"  description="" />
+      </siteMapNode>
+      
+			<siteMapNode url="" title="Wholesaler Management" description="Used to setup defaults for the Wholesaler."
+				roles="Tech Admin,Management">
+				<siteMapNode url="~/Admin/EmailTemplate.aspx" title="Email Template"  description="" />
+				<!--<siteMapNode url="~/Admin/IrWholesaler.aspx" title="Ir Wholesaler"  description="" />
+					<siteMapNode url="~/Admin/Wholesaler.aspx" title="Wholesaler"  description="" />-->
+				<siteMapNode url="~/Admin/WholesalerEdit.aspx?Id=0000000001" title="Wholesaler"  description="" />
+				<siteMapNode url="~/Admin/Wholesaler_Product.aspx" title="Wholesaler Product"  description="" />
+			</siteMapNode>
+
+			<siteMapNode url="" title="System Configuration" description="Used to setup defaults for the system."
+				roles="Client Services">
+				<siteMapNode url="" title="Number Management" description="Used to setup numbers in the system." roles="*">
+					<siteMapNode url="~/Admin/Dnis.aspx?v=1" title="Dnis"  description="" />
+				</siteMapNode>
+				<siteMapNode url="" title="Security Management" description="Used to setup customer related items." roles="*">
+					<siteMapNode url="~/Admin/User.aspx?v=1" title="User"  description="" />
+				</siteMapNode>
+
+				<siteMapNode url="" title="System Management" description="Used to storing system configuration settings." roles="*" >
+          <siteMapNode url="~/Admin/AccountManager.aspx?v=1" title="Account Manager"  description="" />
+					<siteMapNode url="~/Admin/SalesPerson.aspx?v=1" title="Sales Person"  description="" />
+				</siteMapNode>
+			</siteMapNode>
+
+			<siteMapNode url="" title="System Configuration" description="Used to setup defaults for the system."
+				roles="Tech Admin">
+				<siteMapNode url="" title="Bridge Management" description="Used to storing bridge configuration settings." roles="*">
+					<siteMapNode url="~/Admin/Bridge.aspx" title="Bridge"  description="" />
+					<!--<siteMapNode url="~/Admin/BridgeQueue.aspx" title="Bridge Queue"  description="" />-->
+					<siteMapNode url="~/Admin/BridgeRequest.aspx" title="Bridge Request"  description="" />
+					<siteMapNode url="~/Admin/BridgeRequestType.aspx" title="Bridge Request Type"  description="" />
+					<siteMapNode url="~/Admin/BridgeType.aspx" title="Bridge Type"  description="" />
+					<siteMapNode url="~/Admin/CallFlow.aspx" title="Call Flow"  description="" />
+					<siteMapNode url="~/Admin/PromptSet.aspx" title="Prompt Set"  description="" />
+				</siteMapNode>
+				<siteMapNode url="" title="Number Management" description="Used to setup numbers in the system." roles="*">
+					<siteMapNode url="~/Admin/Dnis.aspx" title="Dnis"  description="" />
+					<siteMapNode url="~/Admin/DnisType.aspx" title="Dnis Type"  description="" />
+				</siteMapNode>
+				<siteMapNode url="" title="Security Management" description="Used to setup customer related items." roles="*">
+					<siteMapNode url="~/Admin/Role.aspx" title="Role"  description="" />
+					<siteMapNode url="~/Admin/User.aspx" title="User"  description="" />
+				</siteMapNode>
+
+				<siteMapNode url="" title="System Management" description="Used to storing system configuration settings." roles="*" >
+					<siteMapNode url="~/Admin/AccessType.aspx" title="Access Type"  description="" />
+					<siteMapNode url="~/Admin/AccessType_ProductRateEdit.aspx" title="Access Type Product Rate"  description="" />
+          <siteMapNode url="~/Admin/AccountManager.aspx" title="Account Manager"  description="" />
+          <siteMapNode url="~/Admin/Charity.aspx" title="Charity"  description="" />		
+					<siteMapNode url="~/Admin/Country.aspx" title="Country"  description="" />
+					<siteMapNode url="~/Admin/Currency.aspx" title="Currency"  description="" />
+					<siteMapNode url="~/Admin/Curve.aspx" title="Curve"  description="" />
+					<siteMapNode url="~/Admin/Department.aspx" title="Department"  description="" />
+					<siteMapNode url="~/Admin/Feature.aspx" title="Feature"  description="" />
+					<siteMapNode url="~/Admin/FeatureOption.aspx" title="Feature Option"  description="" />
+					<!--
+					<siteMapNode url="~/Admin/FeatureOptionType.aspx" title="Feature Option Type"  description="" />
+					-->
+					<siteMapNode url="~/Admin/ForEx.aspx" title="For Ex"  description="Foreign Exchange table" />
+					<siteMapNode url="~/Admin/Language.aspx" title="Language"  description="" />
+          <siteMapNode url="~/Admin/MarketingService.aspx" title="Marketing Service"  description="" />
+          <siteMapNode url="~/Admin/Product.aspx" title="Product"  description="" />
+					<siteMapNode url="~/Admin/ProductRate.aspx" title="Product Rate"  description="" />
+					<siteMapNode url="~/Admin/ProductRateInterval.aspx" title="Product Rate Interval"  description="" />
+					<siteMapNode url="~/Admin/ProductRateType.aspx" title="Product Rate Type"  description="" />
+					<siteMapNode url="~/Admin/ProductRateValue.aspx" title="Product Rate Value"  description="" />
+					<siteMapNode url="~/Admin/ProductType.aspx" title="Product Type"  description="" />
+					<siteMapNode url="~/Admin/SalesPerson.aspx" title="Sales Person"  description="" />
+					<siteMapNode url="~/Admin/Vertical.aspx" title="Vertical"  description="" />
+					<siteMapNode url="~/Admin/State.aspx" title="State"  description="" />
+					<siteMapNode url="~/Admin/SystemSettings.aspx" title="System Settings"  description="" />
+					<siteMapNode url="~/Admin/Taxable.aspx" title="Taxable"  description="" />
+				</siteMapNode>
+			</siteMapNode>
+      
+			<siteMapNode url="~/Signout.aspx" title="Sign Out"  description="" roles="*"/>
+			<!--<siteMapNode url="~/Admin/Cdr.aspx" title="Cdr"  description="" />
+			<siteMapNode url="~/Admin/ClientNotes.aspx" title="Client Notes"  description="" />
+			<siteMapNode url="~/Admin/Commission.aspx" title="Commission"  description="" />
+			<siteMapNode url="~/Admin/CommissionAdjustment.aspx" title="Commission Adjustment"  description="" />
+			<siteMapNode url="~/Admin/CommissionRule.aspx" title="Commission Rule"  description="" />
+			<siteMapNode url="~/Admin/CommissionRuleType.aspx" title="Commission Rule Type"  description="" />
+			<siteMapNode url="~/Admin/CommissionSalesTarget.aspx" title="Commission Sales Target"  description="" />-->
+			<!--<siteMapNode url="~/Admin/CompanyInfo.aspx" title="Company Info"  description="" />
+			<siteMapNode url="~/Admin/CompanyLeadTracking.aspx" title="Company Lead Tracking"  description="" />
+			<siteMapNode url="~/Admin/CompanyLeadTrackingNotes.aspx" title="Company Lead Tracking Notes"  description="" />
+			<siteMapNode url="~/Admin/ConferencingSummary.aspx" title="Conferencing Summary"  description="" />
+			<siteMapNode url="~/Admin/Customer_Dnis.aspx" title="Customer Dnis"  description="" />
+			<siteMapNode url="~/Admin/Customer_Feature.aspx" title="Customer Feature"  description="" />-->
+			<!--<siteMapNode url="~/Admin/CustomerDocument.aspx" title="Customer Document"  description="" />
+			<siteMapNode url="~/Admin/CustomerReview.aspx" title="Customer Review"  description="" />
+			<siteMapNode url="~/Admin/CustomerTransaction.aspx" title="Customer Transaction"  description="" />
+			<siteMapNode url="~/Admin/CustomerTransactionImport.aspx" title="Customer Transaction Import"  description="" />
+			<siteMapNode url="~/Admin/CustomerTransactionType.aspx" title="Customer Transaction Type"  description="" />-->
+			<!--<siteMapNode url="~/Admin/DocumentType.aspx" title="Document Type"  description="" />-->
+			<!--<siteMapNode url="~/Admin/ErrorCodes.aspx" title="Error Codes"  description="" />-->
+			<!--<siteMapNode url="~/Admin/Lead.aspx" title="Lead"  description="" />
+			<siteMapNode url="~/Admin/LeadChurnReason.aspx" title="Lead Churn Reason"  description="" />
+			<siteMapNode url="~/Admin/LeadPeriod.aspx" title="Lead Period"  description="" />
+			<siteMapNode url="~/Admin/LeadProduct.aspx" title="Lead Product"  description="" />
+			<siteMapNode url="~/Admin/LeadSource.aspx" title="Lead Source"  description="" />
+			<siteMapNode url="~/Admin/LeadStage.aspx" title="Lead Stage"  description="" />
+			<siteMapNode url="~/Admin/MiscellaneousCharge.aspx" title="Miscellaneous Charge"  description="" />
+			<siteMapNode url="~/Admin/Moderator_Dnis.aspx" title="Moderator Dnis"  description="" />
+			<siteMapNode url="~/Admin/Moderator_Feature.aspx" title="Moderator Feature"  description="" />-->
+			<!--<siteMapNode url="~/Admin/ModeratorXtimeUser.aspx" title="Moderator Xtime User"  description="" />
+			<siteMapNode url="~/Admin/MonthlyCharges.aspx" title="Monthly Charges"  description="" />
+			<siteMapNode url="~/Admin/MonthlyDepartmentSummary.aspx" title="Monthly Department Summary"  description="" />
+			<siteMapNode url="~/Admin/MonthlyInvoiceNotes.aspx" title="Monthly Invoice Notes"  description="" />
+			<siteMapNode url="~/Admin/MonthlyInvoicesSummary.aspx" title="Monthly Invoices Summary"  description="" />
+			<siteMapNode url="~/Admin/MonthlyPayAdj.aspx" title="Monthly Pay Adj"  description="" />
+			<siteMapNode url="~/Admin/MonthlyRefNum.aspx" title="Monthly Ref Num"  description="" />
+			<siteMapNode url="~/Admin/Participant.aspx" title="Participant"  description="" />
+			<siteMapNode url="~/Admin/ParticipantList.aspx" title="Participant List"  description="" />
+			<siteMapNode url="~/Admin/PrevInvoices.aspx" title="Prev Invoices"  description="" />-->
+			<!--<siteMapNode url="~/Admin/RatedCdr.aspx" title="Rated Cdr"  description="" />-->
+			<!--<siteMapNode url="~/Admin/TempCodeChanges.aspx" title="Temp Code Changes"  description="" />
+			<siteMapNode url="~/Admin/TempCodes.aspx" title="Temp Codes"  description="" />
+			<siteMapNode url="~/Admin/TempExistingCodes.aspx" title="Temp Existing Codes"  description="" />
+			<siteMapNode url="~/Admin/TempReplayIds.aspx" title="Temp Replay Ids"  description="" />
+			<siteMapNode url="~/Admin/TempSampleRatesPerProduct.aspx" title="Temp Sample Rates Per Product"  description="" />
+			<siteMapNode url="~/Admin/TempTotalDollarsSpent.aspx" title="Temp Total Dollars Spent"  description="" />
+			<siteMapNode url="~/Admin/Ticket.aspx" title="Ticket"  description="" />
+			<siteMapNode url="~/Admin/TicketCategory.aspx" title="Ticket Category"  description="" />
+			<siteMapNode url="~/Admin/TicketPriority.aspx" title="Ticket Priority"  description="" />
+			<siteMapNode url="~/Admin/TicketProduct.aspx" title="Ticket Product"  description="" />
+			<siteMapNode url="~/Admin/TicketStatus.aspx" title="Ticket Status"  description="" />
+			<siteMapNode url="~/Admin/TicketStatusHistory.aspx" title="Ticket Status History"  description="" />
+			<siteMapNode url="~/Admin/TicketUserAssociations.aspx" title="Ticket User Associations"  description="" />
+			<siteMapNode url="~/Admin/Trend.aspx" title="Trend"  description="" />-->
+			<!--<siteMapNode url="~/Admin/ValidTicketStateChanges.aspx" title="Valid Ticket State Changes"  description="" />-->
+			<!--<siteMapNode url="~/Admin/WelcomeKitRequest.aspx" title="Welcome Kit Request"  description="" />-->
+			<!--<siteMapNode url="~/Admin/Wholesaler_Product_Feature.aspx" title="Wholesaler Product Feature"  description="" />-->
+			</siteMapNode>
+</siteMap>
+

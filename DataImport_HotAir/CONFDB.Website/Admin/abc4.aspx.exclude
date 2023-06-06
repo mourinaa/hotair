@@ -1,0 +1,139 @@
+<%@ Page Language="C#" MasterPageFile="~/MasterPages/admin.master" AutoEventWireup="true"
+    CodeFile="abc4.aspx.cs" Inherits="Admin_abc4" Title="Untitled Page" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
+    Test Out User Controls and Other Coding Ideas.
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div>
+        DEEPLOAD WITH CODE BEHIND - Company from Moderator
+        <br />
+        <strong> For some reason adding Deparment (ones not set to No Department) messing this up.</strong>
+    </div>
+    <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False">
+        <Columns>
+            <asp:TemplateField>
+                <HeaderTemplate>
+                    Company Name</HeaderTemplate>
+                <ItemTemplate>
+                    <%#Eval("CustomerIdSource.CompanyIdSource.Description")%>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:TemplateField>
+                <HeaderTemplate>
+                    Admin Name</HeaderTemplate>
+                <ItemTemplate>
+                    <%#Eval("CustomerIdSource.PrimaryContactName") %>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <data:HyperLinkField HeaderText="User Login" DataNavigateUrlFormatString="UserEdit.aspx?UserId={0}"
+                DataNavigateUrlFields="UserId" DataContainer="UserIdSource" DataTextField="Username" />
+        </Columns>
+    </asp:GridView>
+
+    <div>
+        DEEPLOAD WITH TYPED DATASOURCE CONTROL - Company from Moderator
+    </div>
+    <data:EntityGridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GridView1_SelectedIndexChanged"
+        DataSourceID="ModeratorDataSource" DataKeyNames="Id" AllowMultiColumnSorting="false"
+        DefaultSortColumnName="" DefaultSortDirection="Ascending" ExcelExportFileName="Export_Conference.xls">
+        <Columns>
+            <asp:CommandField ShowSelectButton="True" ShowEditButton="False" />
+            <asp:TemplateField>
+                <headertemplate>Company Name</headertemplate>
+                <itemtemplate>
+                      <%#Eval("CustomerIdSource.CompanyIdSource.Description")%>
+                   </itemtemplate>
+            </asp:TemplateField>
+            <asp:TemplateField>
+                <headertemplate>Admin Name</headertemplate>
+                <itemtemplate>
+                      <%#Eval("CustomerIdSource.PrimaryContactName") %>
+                   </itemtemplate>
+            </asp:TemplateField>
+            <asp:BoundField DataField="PriCustomerNumber" HeaderText="Pri Customer Number" SortExpression="[PriCustomerNumber]"
+                ReadOnly="true" />
+            <asp:BoundField DataField="SecCustomerNumber" HeaderText="Sec Customer Number" SortExpression="[SecCustomerNumber]"
+                ReadOnly="true" />
+            <asp:BoundField DataField="ExternalModeratorNumber" HeaderText="External Moderator Number"
+                SortExpression="[ExternalModeratorNumber]" />
+            <asp:BoundField DataField="ModeratorCode" HeaderText="Moderator Code" />
+            <asp:BoundField DataField="PassCode" HeaderText="Pass Code" />
+            <asp:BoundField DataField="Description" HeaderText="Conference Name" />
+            <asp:BoundField ReadOnly="true" DataField="ModifiedBy" HeaderText="Modified By" />
+            <asp:BoundField ReadOnly="true" DataField="CreatedDate" DataFormatString="{0:d}"
+                HtmlEncode="False" HeaderText="Created Date" />
+            <asp:BoundField ReadOnly="true" DataField="LastModified" DataFormatString="{0:d}"
+                HtmlEncode="False" HeaderText="Last Modified" />
+            <data:BoundRadioButtonField DataField="Enabled" HeaderText="Enabled" SortExpression="[Enabled]" />
+            <data:HyperLinkField HeaderText="User Login" DataNavigateUrlFormatString="UserEdit.aspx?UserId={0}"
+                DataNavigateUrlFields="UserId" DataContainer="UserIdSource" DataTextField="Username" />
+        </Columns>
+        <EmptyDataTemplate>
+            <b>No Moderator Found!</b>
+        </EmptyDataTemplate>
+    </data:EntityGridView>
+
+    <data:ModeratorDataSource ID="ModeratorDataSource" runat="server" SelectMethod="GetPaged"
+        EnablePaging="True" EnableSorting="True" EnableDeepLoad="True">
+        <DeepLoadProperties Method="IncludeChildren" Recursive="True">
+            <Types>
+                <data:ModeratorProperty Name="Customer" />
+                <%--<data:ModeratorProperty Name="Department" />--%>
+                <data:ModeratorProperty Name="User" />
+                <data:CustomerProperty Name="Company" />
+                <%--<data:ModeratorProperty Name="Moderator_DnisCollection" />--%>
+                <%--<data:ModeratorProperty Name="Moderator_FeatureCollection" />--%>
+                <%--<data:ModeratorProperty Name="TicketCollection" />--%>
+                <%--<data:ModeratorProperty Name="BridgeQueueCollection" />--%>
+                <%--<data:ModeratorProperty Name="BridgeRequestCollection" />--%>
+                <%--<data:ModeratorProperty Name="RatedCdrCollection" />--%>
+                <%--<data:ModeratorProperty Name="DnisidDnisCollection_From_Moderator_Dnis" />--%>
+            </Types>
+        </DeepLoadProperties>
+        <Parameters>
+            <data:CustomParameter Name="WhereClause" Value="" ConvertEmptyStringToNull="false" />
+            <data:CustomParameter Name="OrderByClause" Value="" ConvertEmptyStringToNull="false" />
+            <asp:ControlParameter Name="PageIndex" ControlID="GridView1" PropertyName="PageIndex"
+                Type="Int32" />
+            <asp:ControlParameter Name="PageSize" ControlID="GridView1" PropertyName="PageSize"
+                Type="Int32" />
+            <data:CustomParameter Name="RecordCount" Value="0" Type="Int32" />
+        </Parameters>
+    </data:ModeratorDataSource>
+
+    <div>
+        DEEPLOAD WITH VIEW DATASOURCE CONTROL - Conference List
+    </div>
+    <data:EntityGridView ID="GridView3" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GridView3_SelectedIndexChanged"
+        DataSourceID="ConferenceDataSource" DataKeyNames="Id" AllowMultiColumnSorting="true"
+        DefaultSortColumnName="[CompanyName]" DefaultSortDirection="Ascending" ExcelExportFileName="Export_Conference.xls">
+        <Columns>
+            <asp:CommandField ShowSelectButton="True" ShowEditButton="False" />
+            <asp:BoundField DataField="CompanyName" HeaderText="Company Name" SortExpression="[CompanyName]" />
+            <asp:BoundField DataField="AdminName" HeaderText="Admin Name" SortExpression="[AdminName]" />
+            <asp:BoundField DataField="ModeratorName" HeaderText="Moderator Name" SortExpression="[ModeratorName]"/>
+            <asp:BoundField DataField="ModeratorCode" HeaderText="Moderator Code" />
+            <asp:BoundField DataField="PassCode" HeaderText="Participant Code" />
+            <asp:BoundField DataField="Enabled" HeaderText="Enabled" />
+            <asp:BoundField DataField="LastWalletCardSentdate" HeaderText="Last Wallet Card Sent" />
+        </Columns>
+        <EmptyDataTemplate>
+            <b>No Conference Found!</b>
+        </EmptyDataTemplate>
+    </data:EntityGridView>
+
+    <data:Vw_ConferenceListDataSource ID="ConferenceDataSource" runat="server" SelectMethod="GetPaged"
+        EnablePaging="True" EnableSorting="True">
+        <Parameters>
+            <data:CustomParameter Name="WhereClause" Value="" ConvertEmptyStringToNull="false" />
+            <data:CustomParameter Name="OrderByClause" Value="" ConvertEmptyStringToNull="false" />
+            <asp:ControlParameter Name="PageIndex" ControlID="GridView3" PropertyName="PageIndex"
+                Type="Int32" />
+            <asp:ControlParameter Name="PageSize" ControlID="GridView3" PropertyName="PageSize"
+                Type="Int32" />
+            <data:CustomParameter Name="RecordCount" Value="0" Type="Int32" />
+        </Parameters>
+    </data:Vw_ConferenceListDataSource>
+
+</asp:Content>

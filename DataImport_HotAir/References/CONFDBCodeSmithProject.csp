@@ -1,0 +1,602 @@
+<?xml version="1.0"?>
+<codeSmith xmlns="http://www.codesmithtools.com/schema/csp.xsd">
+  <propertySets>
+    <propertySet output="NetTiers.txt" template="C:\Documents and Settings\Administrator\My Documents\CodeSmith\Samples\v4.0\Templates\netTiers2.2.662\NetTiers.cst">
+      <property name="ExecuteSql">False</property>
+      <property name="SQLFolderName">SQL</property>
+      <property name="ViewReport">True</property>
+      <property name="AutoIncrementBuildVersion">True</property>
+      <property name="LaunchVisualStudio">False</property>
+      <property name="IncludeUnitTest">None</property>
+      <property name="IncludeComponentLayer">ServiceLayer</property>
+      <property name="IncludeDatabaseFeatures">SQLServer2005</property>
+      <property name="IncludeWCFDataAttributes">False</property>
+      <property name="SerializeEntityState">False</property>
+      <property name="EntLibVersion">v3_1</property>
+      <property name="IncludeXmlAttributes">False</property>
+      <property name="CustomCodeFolderName">App_Code</property>
+      <property name="BusinessLogicLayerNameSpace">Entities</property>
+      <property name="DataAccessLayerNameSpace">Data</property>
+      <property name="UnitTestsNameSpace">UnitTests</property>
+      <property name="SignAssembly">False</property>
+      <property name="GenerateWebLibrary">True</property>
+      <property name="IncludeDesignTimeSupport">True</property>
+      <property name="DataSourceEnableTransactionDefault">True</property>
+      <property name="GenerateWebservice">False</property>
+      <property name="AttemptCreateLocalVirtualDirectory">False</property>
+      <property name="GenerateWebsite">True</property>
+      <property name="UseWebAppProject">False</property>
+      <property name="OverwriteWebConfig">False</property>
+      <property name="IncludeAtlasLibrary">True</property>
+      <property name="IncludeAtlasToolkit">True</property>
+      <property name="GenerateWebsiteAdmin">True</property>
+      <property name="DateFormat">MM/dd/yyyy</property>
+      <property name="RetryEnabled">False</property>
+      <property name="RetryMaxAttempts">5</property>
+      <property name="RetrySleepTime">1000</property>
+      <property name="LibraryPath">References</property>
+      <property name="IncludeCustoms">True</property>
+      <property name="CustomNonMatchingReturnType">DataSet</property>
+      <property name="IncludeDrop">True</property>
+      <property name="DropStyle">Entity</property>
+      <property name="IncludeInsert">True</property>
+      <property name="IncludeUpdate">True</property>
+      <property name="IncludeSave">True</property>
+      <property name="IncludeDelete">True</property>
+      <property name="IncludeGet">True</property>
+      <property name="IncludeGetList">True</property>
+      <property name="IncludeGetListByFK">True</property>
+      <property name="IncludeGetListByIX">True</property>
+      <property name="IncludeFind">True</property>
+      <property name="IncludeManyToMany">True</property>
+      <property name="IncludeRelations">True</property>
+      <property name="IsolationLevel">None</property>
+      <property name="InsertSuffix">_Insert</property>
+      <property name="UpdateSuffix">_Update</property>
+      <property name="DeleteSuffix">_Delete</property>
+      <property name="SelectSuffix">_Get</property>
+      <property name="SelectAllSuffix">_List</property>
+      <property name="FindSuffix">_Find</property>
+      <property name="GenerateWinLibrary">False</property>
+      <property name="SourceTables">
+        <connectionString>Server=VMDEV;Database=CONFDB;uid=sa;pwd=!Mookie7;</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <tableList>
+      <table>
+        <owner>dbo</owner>
+        <name>AccessType</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>AccessType_ProductRate</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>AccountManager</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Action</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>ActionType</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>AdminSiteNotes</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>AdminSiteNotesHistory</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>AdminSiteNotesType</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>AreaCodeNXX</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>AuditLog</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>AverageRates</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>BillableLegs</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Bridge</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>BridgeQueue</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>BridgeRequest</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>BridgeRequestType</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>BridgeType</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>CallFlow</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Charity</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>ClientNotes</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Commission</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>CommissionCustomer</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Company</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>CompanyInfo</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>CompanyLeadTracking</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>CompanyLeadTrackingNotes</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>ConferencingSummary</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Country</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Currency</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Curve</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Customer</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Customer_DNIS</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Customer_Feature</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>CustomerDocument</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>CustomerReview</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>CustomerTransaction</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>CustomerTransactionImport</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>CustomerTransactionType</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Department</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>DNIS</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>DNISType</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>DocumentType</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>EmailTemplate</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>ErrorCodes</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Feature</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>FeatureOption</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>FeatureOptionType</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>ForEx</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>GLPostingType</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>InvoiceCharges</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>InvoiceNotes</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>InvoiceSummary</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>IRWholesaler</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Language</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Lead</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>LeadChurnReason</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>LeadPeriod</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>LeadProduct</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>LeadSource</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>LeadStage</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>MarketingService</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Moderator</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Moderator_DNIS</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Moderator_Feature</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>ModeratorXTimeUser</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Participant</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>ParticipantList</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>PrevInvoices</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Product</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>ProductRate</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>ProductRateInterval</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>ProductRateType</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>ProductRateValue</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>ProductType</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>PromptSet</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>RatedCDR</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>RatingType</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Recording</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>RecordingParticipantUsage</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Role</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>SalesPerson</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>SeeVoghMeetingTracker</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>State</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>SystemSettings</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Taxable</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>tempCodeChanges</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>TempCodes</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>TempExistingCodes</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>TempReplayIDs</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>TempSampleRatesPerProduct</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>TempTotalDollarsSpent</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Ticket</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>TicketCategory</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>TicketPriority</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>TicketProduct</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>TicketStatus</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>TicketStatusHistory</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>TicketUserAssociations</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Trend</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>User</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>User_MarketingService</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>UTIL</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>ValidTicketStateChanges</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Vertical</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>WelcomeKitRequest</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Wholesaler</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Wholesaler_Product</name>
+      </table>
+      <table>
+        <owner>dbo</owner>
+        <name>Wholesaler_Product_Feature</name>
+      </table>
+    </tableList>
+      </property>
+      <property name="WebServiceOutputPath">c:\NetTiers\CONFDB_2.2.663\WebServices</property>
+      <property name="WebServiceUrl">http://localhost/CONFDBServices</property>
+      <property name="WebAdminSiteName">CONFDB Application</property>
+      <property name="ChooseSourceDatabase">
+        <connectionString>Server=VMDEV;Database=CONFDB;uid=sa;pwd=!Mookie7;</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+      </property>
+      <property name="RetrySleepStyle">Constant</property>
+      <property name="IncludeGeneratedDate">False</property>
+      <property name="NameConversion">None</property>
+      <property name="MethodNames">
+        <MethodNamesProperty xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="">
+      <Get>Get</Get>
+      <GetAll>GetAll</GetAll>
+      <GetPaged>GetPaged</GetPaged>
+      <Find>Find</Find>
+      <Insert>Insert</Insert>
+      <Update>Update</Update>
+      <Save>Save</Save>
+      <Delete>Delete</Delete>
+      <DeepLoad>DeepLoad</DeepLoad>
+      <DeepSave>DeepSave</DeepSave>
+      <GetTotalItems>GetTotalItems</GetTotalItems>
+      <BulkInsert>BulkInsert</BulkInsert>
+    </MethodNamesProperty>
+      </property>
+      <property name="StrippedTablePrefixes">tbl;tbl_</property>
+      <property name="StrippedTableSuffixes">_t</property>
+      <property name="EntityFormat">{0}</property>
+      <property name="EntityKeyFormat">{0}Key</property>
+      <property name="CollectionFormat">{0}Collection</property>
+      <property name="GenericViewFormat">VList&lt;{0}&gt;</property>
+      <property name="GenericListFormat">TList&lt;{0}&gt;</property>
+      <property name="ProviderFormat">{0}Provider</property>
+      <property name="InterfaceFormat">I{0}</property>
+      <property name="BaseClassFormat">{0}Base</property>
+      <property name="EnumFormat">{0}List</property>
+      <property name="ManyToManyFormat">{0}From{1}</property>
+      <property name="ServiceClassNameFormat">{0}Service</property>
+      <property name="ColumnClassNameFormat">{0}Column</property>
+      <property name="ComparerClassNameFormat">{0}Comparer</property>
+      <property name="EventHandlerClassNameFormat">{0}EventHandler</property>
+      <property name="EventArgsClassNameFormat">{0}EventArgs</property>
+      <property name="ParseDbColDefaultVal">True</property>
+      <property name="ChangeUnderscoreToPascalCase">False</property>
+      <property name="SafeNamePrefix">SafeName_</property>
+      <property name="UsePascalCasing">Style2</property>
+      <property name="ProcedurePrefix">p</property>
+      <property name="CustomProcedureStartsWith">p_{0}_</property>
+      <property name="CSPUseDefaultValForNonNullableTypes">False</property>
+      <property name="RootNameSpace">CONFDB</property>
+      <property name="OutputDirectory">c:\NetTiers\CONFDB_2.2.663</property>
+      <property name="MappingFile">c:\NetTiers\CONFDB_2.2.663\CONFDBMapping.config</property>
+      <property name="ComponentLayerNameSpace">Services</property>
+      <property name="SourceViews">
+        <connectionString>Server=VMDEV;Database=CONFDB;uid=sa;pwd=!Mookie7;</connectionString>
+        <providerType>SchemaExplorer.SqlSchemaProvider,SchemaExplorer.SqlSchemaProvider</providerType>
+        <viewList>
+      <view>
+        <owner>dbo</owner>
+        <name>vw_AccessType_ProductRates</name>
+      </view>
+      <view>
+        <owner>dbo</owner>
+        <name>vw_ConferenceCallList_Unique</name>
+      </view>
+      <view>
+        <owner>dbo</owner>
+        <name>vw_ConferenceList</name>
+      </view>
+      <view>
+        <owner>dbo</owner>
+        <name>vw_CustomerList</name>
+      </view>
+      <view>
+        <owner>dbo</owner>
+        <name>vw_CustomerTransactionList</name>
+      </view>
+      <view>
+        <owner>dbo</owner>
+        <name>vw_DefaultProductRates</name>
+      </view>
+      <view>
+        <owner>dbo</owner>
+        <name>vw_ModeratorList</name>
+      </view>
+      <view>
+        <owner>dbo</owner>
+        <name>vw_ModeratorList_AdminSite</name>
+      </view>
+      <view>
+        <owner>dbo</owner>
+        <name>vw_RecordingList</name>
+      </view>
+      <view>
+        <owner>dbo</owner>
+        <name>vw_UserList</name>
+      </view>
+    </viewList>
+      </property>
+      <property name="AliasFilePath" />
+    </propertySet>
+  </propertySets>
+</codeSmith>

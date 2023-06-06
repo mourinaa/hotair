@@ -1,0 +1,40 @@
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\AdminSite\CONFDB_2.2.662_FULL\CONFDB.Entities\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\AdminSite\CONFDB_2.2.662_FULL\CONFDB.Entities\bin\Debug\CONFDB.Entities.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\AdminSite\CONFDB_2.2.662_FULL\CONFDB.Entities\bin\Debug\CONFDB.Entities.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\AdminSite\CONFDB_2.2.662_FULL\CONFDB.Entities\bin\Debug\CONFDB.Entities.xml
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\AdminSite\CONFDB_2.2.662_FULL\CONFDB.Entities\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\AdminSite\CONFDB_2.2.662_FULL\CONFDB.Entities\obj\Debug\CONFDB.Entities.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\AdminSite\CONFDB_2.2.662_FULL\CONFDB.Entities\obj\Debug\CONFDB.Entities.pdb
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Entities\bin\Debug\CONFDB.Entities.dll
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Entities\bin\Debug\CONFDB.Entities.pdb
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Entities\bin\Debug\CONFDB.Entities.xml
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Entities\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.dll
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Entities\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Entities\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Entities\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Entities\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Entities\obj\Debug\ResolveAssemblyReference.cache
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Entities\obj\Debug\CONFDB.Entities.dll
+C:\NetTiers\CONFDB_2.2.662_FULL\CONFDB.Entities\obj\Debug\CONFDB.Entities.pdb
+C:\NetTiers\DataImport\CONFDB.Entities\bin\Debug\CONFDB.Entities.dll
+C:\NetTiers\DataImport\CONFDB.Entities\bin\Debug\CONFDB.Entities.pdb
+C:\NetTiers\DataImport\CONFDB.Entities\bin\Debug\CONFDB.Entities.xml
+C:\NetTiers\DataImport\CONFDB.Entities\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.dll
+C:\NetTiers\DataImport\CONFDB.Entities\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+C:\NetTiers\DataImport\CONFDB.Entities\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\NetTiers\DataImport\CONFDB.Entities\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+C:\NetTiers\DataImport\CONFDB.Entities\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+C:\NetTiers\DataImport\CONFDB.Entities\obj\Debug\ResolveAssemblyReference.cache
+C:\NetTiers\DataImport\CONFDB.Entities\obj\Debug\CONFDB.Entities.dll
+C:\NetTiers\DataImport\CONFDB.Entities\obj\Debug\CONFDB.Entities.pdb
+C:\NetTiers\DataImport_HotAir\CONFDB.Entities\bin\Debug\CONFDB.Entities.dll
+C:\NetTiers\DataImport_HotAir\CONFDB.Entities\bin\Debug\CONFDB.Entities.pdb
+C:\NetTiers\DataImport_HotAir\CONFDB.Entities\bin\Debug\CONFDB.Entities.xml
+C:\NetTiers\DataImport_HotAir\CONFDB.Entities\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.Cryptography.dll
+C:\NetTiers\DataImport_HotAir\CONFDB.Entities\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Caching.dll
+C:\NetTiers\DataImport_HotAir\CONFDB.Entities\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\NetTiers\DataImport_HotAir\CONFDB.Entities\bin\Debug\Microsoft.Practices.ObjectBuilder.dll
+C:\NetTiers\DataImport_HotAir\CONFDB.Entities\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+C:\NetTiers\DataImport_HotAir\CONFDB.Entities\obj\Debug\ResolveAssemblyReference.cache
+C:\NetTiers\DataImport_HotAir\CONFDB.Entities\obj\Debug\CONFDB.Entities.dll
+C:\NetTiers\DataImport_HotAir\CONFDB.Entities\obj\Debug\CONFDB.Entities.pdb

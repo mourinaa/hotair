@@ -1,0 +1,81 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using CONFDB.Services;
+using CONFDB.Entities;
+
+public partial class Admin_abc2 : System.Web.UI.Page
+{
+    private string _CustomerID;
+    private string _ModeratorID;
+    private string _WholesalerID;
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        _WholesalerID = "0000000001";
+        _CustomerID = "14"; //Get the CustomerID some way. Could be querystring
+        _ModeratorID = "9";
+        //Try binding from code
+        if (!Page.IsPostBack)
+        {
+            BindData();
+        }
+        
+    }
+
+    /// <summary>
+    /// Used to bind the data for data sources and data controls.
+    /// </summary>
+    public void BindData()
+    {
+        WholesalerService wsService = new WholesalerService();
+        DataSet dsWS = wsService.GetProductRates(_WholesalerID);
+        GridViewProductRateValue.DataSource = dsWS;
+        GridViewProductRateValue.RecordsCount = dsWS.Tables[0].Rows.Count;
+        //GridViewProductRateValue.PageSize = 20;
+        GridViewProductRateValue.DataBind();
+
+        //Setup the User Controls and databind them
+        //Rates
+        ucProductRatesWS.WholesalerID = _WholesalerID;
+        ucProductRatesWS.BindData();
+        ucProductRatesCustomer.CustomerID = _CustomerID;
+        ucProductRatesCustomer.BindData();
+        ucDNISCustomer.CustomerID = _CustomerID;
+        ucDNISCustomer.BindData();
+        ucDNISModerator.ModeratorID = _ModeratorID;
+        ucDNISModerator.BindData();
+
+        //Features
+        ucFeaturesWS.WholesalerID = _WholesalerID;
+        ucFeaturesWS.BindData();
+        ucFeaturesCustomer.CustomerID = _CustomerID;
+        ucFeaturesCustomer.BindData();
+        ucFeaturesModerator.ModeratorID = _ModeratorID;
+        ucFeaturesModerator.BindData();
+
+    }
+
+    private int _recordcount = 0;
+    protected void dsGetProductRates_Selected(object sender, ObjectDataSourceStatusEventArgs e)
+    {
+
+        if (e.ReturnValue != null)
+        {
+            _recordcount = ((DataSet)e.ReturnValue).Tables[0].Rows.Count;
+        }
+        
+
+    }
+    protected void EntityGridView1_DataBound(object sender, EventArgs e)
+    {
+        EntityGridView1.RecordsCount = _recordcount;
+    }
+}

@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsCallDetailsForModerator" targetNamespace="http://tempuri.org/dsCallDetailsForModerator.xsd" xmlns:mstns="http://tempuri.org/dsCallDetailsForModerator.xsd" xmlns="http://tempuri.org/dsCallDetailsForModerator.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsCallDetailsForModerator" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsCallDetailsForModerator" msprop:Generator_DataSetName="dsCallDetailsForModerator">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="p_RatedCDR_GetCallDetailsForModerator" msprop:Generator_UserTableName="p_RatedCDR_GetCallDetailsForModerator" msprop:Generator_RowDeletedName="p_RatedCDR_GetCallDetailsForModeratorRowDeleted" msprop:Generator_TableClassName="p_RatedCDR_GetCallDetailsForModeratorDataTable" msprop:Generator_RowChangedName="p_RatedCDR_GetCallDetailsForModeratorRowChanged" msprop:Generator_RowClassName="p_RatedCDR_GetCallDetailsForModeratorRow" msprop:Generator_RowChangingName="p_RatedCDR_GetCallDetailsForModeratorRowChanging" msprop:Generator_RowEvArgName="p_RatedCDR_GetCallDetailsForModeratorRowChangeEvent" msprop:Generator_RowEvHandlerName="p_RatedCDR_GetCallDetailsForModeratorRowChangeEventHandler" msprop:Generator_TablePropName="p_RatedCDR_GetCallDetailsForModerator" msprop:Generator_TableVarName="tablep_RatedCDR_GetCallDetailsForModerator" msprop:Generator_RowDeletingName="p_RatedCDR_GetCallDetailsForModeratorRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:string" />
+              <xs:element name="ConferenceID" msprop:Generator_UserColumnName="ConferenceID" msprop:Generator_ColumnPropNameInRow="ConferenceID" msprop:Generator_ColumnVarNameInTable="columnConferenceID" msprop:Generator_ColumnPropNameInTable="ConferenceIDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ModeratorID" msprop:Generator_UserColumnName="ModeratorID" msprop:Generator_ColumnPropNameInRow="ModeratorID" msprop:Generator_ColumnVarNameInTable="columnModeratorID" msprop:Generator_ColumnPropNameInTable="ModeratorIDColumn" type="xs:int" />
+              <xs:element name="CustomerID" msprop:Generator_UserColumnName="CustomerID" msprop:Generator_ColumnPropNameInRow="CustomerID" msprop:Generator_ColumnVarNameInTable="columnCustomerID" msprop:Generator_ColumnPropNameInTable="CustomerIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="WholesalerID" msprop:Generator_UserColumnName="WholesalerID" msprop:Generator_ColumnPropNameInRow="WholesalerID" msprop:Generator_ColumnVarNameInTable="columnWholesalerID" msprop:Generator_ColumnPropNameInTable="WholesalerIDColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ModeratorCode" msprop:Generator_UserColumnName="ModeratorCode" msprop:Generator_ColumnPropNameInRow="ModeratorCode" msprop:Generator_ColumnVarNameInTable="columnModeratorCode" msprop:Generator_ColumnPropNameInTable="ModeratorCodeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PassCode" msprop:Generator_UserColumnName="PassCode" msprop:Generator_ColumnPropNameInRow="PassCode" msprop:Generator_ColumnVarNameInTable="columnPassCode" msprop:Generator_ColumnPropNameInTable="PassCodeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ModeratorName" msprop:Generator_UserColumnName="ModeratorName" msprop:Generator_ColumnPropNameInRow="ModeratorName" msprop:Generator_ColumnVarNameInTable="columnModeratorName" msprop:Generator_ColumnPropNameInTable="ModeratorNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Moderator" msprop:Generator_UserColumnName="Moderator" msprop:Generator_ColumnPropNameInRow="Moderator" msprop:Generator_ColumnVarNameInTable="columnModerator" msprop:Generator_ColumnPropNameInTable="ModeratorColumn" type="xs:int" />
+              <xs:element name="ExternalCustomerNumber" msprop:Generator_UserColumnName="ExternalCustomerNumber" msprop:Generator_ColumnPropNameInRow="ExternalCustomerNumber" msprop:Generator_ColumnVarNameInTable="columnExternalCustomerNumber" msprop:Generator_ColumnPropNameInTable="ExternalCustomerNumberColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExternalModeratorNumber" msprop:Generator_UserColumnName="ExternalModeratorNumber" msprop:Generator_ColumnPropNameInRow="ExternalModeratorNumber" msprop:Generator_ColumnVarNameInTable="columnExternalModeratorNumber" msprop:Generator_ColumnPropNameInTable="ExternalModeratorNumberColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReferenceNumber" msprop:Generator_UserColumnName="ReferenceNumber" msprop:Generator_ColumnPropNameInRow="ReferenceNumber" msprop:Generator_ColumnVarNameInTable="columnReferenceNumber" msprop:Generator_ColumnPropNameInTable="ReferenceNumberColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ConferenceStartTime" msprop:Generator_UserColumnName="ConferenceStartTime" msprop:Generator_ColumnPropNameInRow="ConferenceStartTime" msprop:Generator_ColumnVarNameInTable="columnConferenceStartTime" msprop:Generator_ColumnPropNameInTable="ConferenceStartTimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ConferenceEndTime" msprop:Generator_UserColumnName="ConferenceEndTime" msprop:Generator_ColumnPropNameInRow="ConferenceEndTime" msprop:Generator_ColumnVarNameInTable="columnConferenceEndTime" msprop:Generator_ColumnPropNameInTable="ConferenceEndTimeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ConferenceElapsedTime" msprop:Generator_UserColumnName="ConferenceElapsedTime" msprop:Generator_ColumnPropNameInRow="ConferenceElapsedTime" msprop:Generator_ColumnVarNameInTable="columnConferenceElapsedTime" msprop:Generator_ColumnPropNameInTable="ConferenceElapsedTimeColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="StartTime" msprop:Generator_UserColumnName="StartTime" msprop:Generator_ColumnPropNameInRow="StartTime" msprop:Generator_ColumnVarNameInTable="columnStartTime" msprop:Generator_ColumnPropNameInTable="StartTimeColumn" type="xs:dateTime" />
+              <xs:element name="EndTime" msprop:Generator_UserColumnName="EndTime" msprop:Generator_ColumnPropNameInRow="EndTime" msprop:Generator_ColumnVarNameInTable="columnEndTime" msprop:Generator_ColumnPropNameInTable="EndTimeColumn" type="xs:dateTime" />
+              <xs:element name="ElapsedTime" msprop:Generator_UserColumnName="ElapsedTime" msprop:Generator_ColumnPropNameInRow="ElapsedTime" msprop:Generator_ColumnVarNameInTable="columnElapsedTime" msprop:Generator_ColumnPropNameInTable="ElapsedTimeColumn" type="xs:int" />
+              <xs:element name="BridgeID" msprop:Generator_UserColumnName="BridgeID" msprop:Generator_ColumnPropNameInRow="BridgeID" msprop:Generator_ColumnVarNameInTable="columnBridgeID" msprop:Generator_ColumnPropNameInTable="BridgeIDColumn" type="xs:int" />
+              <xs:element name="UniqueConferenceID" msprop:Generator_UserColumnName="UniqueConferenceID" msprop:Generator_ColumnPropNameInRow="UniqueConferenceID" msprop:Generator_ColumnVarNameInTable="columnUniqueConferenceID" msprop:Generator_ColumnPropNameInTable="UniqueConferenceIDColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AuxiliaryConferenceID" msprop:Generator_UserColumnName="AuxiliaryConferenceID" msprop:Generator_ColumnPropNameInRow="AuxiliaryConferenceID" msprop:Generator_ColumnVarNameInTable="columnAuxiliaryConferenceID" msprop:Generator_ColumnPropNameInTable="AuxiliaryConferenceIDColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DNIS" msprop:Generator_UserColumnName="DNIS" msprop:Generator_ColumnPropNameInRow="DNIS" msprop:Generator_ColumnVarNameInTable="columnDNIS" msprop:Generator_ColumnPropNameInTable="DNISColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DialNumber" msprop:Generator_UserColumnName="DialNumber" msprop:Generator_ColumnPropNameInRow="DialNumber" msprop:Generator_ColumnVarNameInTable="columnDialNumber" msprop:Generator_ColumnPropNameInTable="DialNumberColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ANI" msprop:Generator_UserColumnName="ANI" msprop:Generator_ColumnPropNameInRow="ANI" msprop:Generator_ColumnVarNameInTable="columnANI" msprop:Generator_ColumnPropNameInTable="ANIColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParticipantName" msprop:Generator_UserColumnName="ParticipantName" msprop:Generator_ColumnPropNameInRow="ParticipantName" msprop:Generator_ColumnVarNameInTable="columnParticipantName" msprop:Generator_ColumnPropNameInTable="ParticipantNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Destination" msprop:Generator_UserColumnName="Destination" msprop:Generator_ColumnPropNameInRow="Destination" msprop:Generator_ColumnVarNameInTable="columnDestination" msprop:Generator_ColumnPropNameInTable="DestinationColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AccessTypeID" msprop:Generator_UserColumnName="AccessTypeID" msprop:Generator_ColumnPropNameInRow="AccessTypeID" msprop:Generator_ColumnVarNameInTable="columnAccessTypeID" msprop:Generator_ColumnPropNameInTable="AccessTypeIDColumn" type="xs:int" />
+              <xs:element name="ConnectProductRateID" msprop:Generator_UserColumnName="ConnectProductRateID" msprop:Generator_ColumnPropNameInRow="ConnectProductRateID" msprop:Generator_ColumnVarNameInTable="columnConnectProductRateID" msprop:Generator_ColumnPropNameInTable="ConnectProductRateIDColumn" type="xs:int" />
+              <xs:element name="BridgeProductRateID" msprop:Generator_UserColumnName="BridgeProductRateID" msprop:Generator_ColumnPropNameInRow="BridgeProductRateID" msprop:Generator_ColumnVarNameInTable="columnBridgeProductRateID" msprop:Generator_ColumnPropNameInTable="BridgeProductRateIDColumn" type="xs:int" />
+              <xs:element name="LDProductRateID" msprop:Generator_UserColumnName="LDProductRateID" msprop:Generator_ColumnPropNameInRow="LDProductRateID" msprop:Generator_ColumnVarNameInTable="columnLDProductRateID" msprop:Generator_ColumnPropNameInTable="LDProductRateIDColumn" type="xs:int" />
+              <xs:element name="ProductRateTaxableValue" msprop:Generator_UserColumnName="ProductRateTaxableValue" msprop:Generator_ColumnPropNameInRow="ProductRateTaxableValue" msprop:Generator_ColumnVarNameInTable="columnProductRateTaxableValue" msprop:Generator_ColumnPropNameInTable="ProductRateTaxableValueColumn" type="xs:int" />
+              <xs:element name="CustomerTaxableValue" msprop:Generator_UserColumnName="CustomerTaxableValue" msprop:Generator_ColumnPropNameInRow="CustomerTaxableValue" msprop:Generator_ColumnVarNameInTable="columnCustomerTaxableValue" msprop:Generator_ColumnPropNameInTable="CustomerTaxableValueColumn" type="xs:int" />
+              <xs:element name="WSTaxableValue" msprop:Generator_UserColumnName="WSTaxableValue" msprop:Generator_ColumnPropNameInRow="WSTaxableValue" msprop:Generator_ColumnVarNameInTable="columnWSTaxableValue" msprop:Generator_ColumnPropNameInTable="WSTaxableValueColumn" type="xs:int" />
+              <xs:element name="RetailConnectCharge" msprop:Generator_UserColumnName="RetailConnectCharge" msprop:Generator_ColumnPropNameInRow="RetailConnectCharge" msprop:Generator_ColumnVarNameInTable="columnRetailConnectCharge" msprop:Generator_ColumnPropNameInTable="RetailConnectChargeColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RetailBridgeRate" msprop:Generator_UserColumnName="RetailBridgeRate" msprop:Generator_ColumnPropNameInRow="RetailBridgeRate" msprop:Generator_ColumnVarNameInTable="columnRetailBridgeRate" msprop:Generator_ColumnPropNameInTable="RetailBridgeRateColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RetailLDRate" msprop:Generator_UserColumnName="RetailLDRate" msprop:Generator_ColumnPropNameInRow="RetailLDRate" msprop:Generator_ColumnVarNameInTable="columnRetailLDRate" msprop:Generator_ColumnPropNameInTable="RetailLDRateColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RetailCurrency" msprop:Generator_UserColumnName="RetailCurrency" msprop:Generator_ColumnPropNameInRow="RetailCurrency" msprop:Generator_ColumnVarNameInTable="columnRetailCurrency" msprop:Generator_ColumnPropNameInTable="RetailCurrencyColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RetailBillingInterval" msprop:Generator_UserColumnName="RetailBillingInterval" msprop:Generator_ColumnPropNameInRow="RetailBillingInterval" msprop:Generator_ColumnVarNameInTable="columnRetailBillingInterval" msprop:Generator_ColumnPropNameInTable="RetailBillingIntervalColumn" type="xs:int" />
+              <xs:element name="RetailTotalConnectCharge" msprop:Generator_UserColumnName="RetailTotalConnectCharge" msprop:Generator_ColumnPropNameInRow="RetailTotalConnectCharge" msprop:Generator_ColumnVarNameInTable="columnRetailTotalConnectCharge" msprop:Generator_ColumnPropNameInTable="RetailTotalConnectChargeColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RetailTotalBridge" msprop:Generator_UserColumnName="RetailTotalBridge" msprop:Generator_ColumnPropNameInRow="RetailTotalBridge" msprop:Generator_ColumnVarNameInTable="columnRetailTotalBridge" msprop:Generator_ColumnPropNameInTable="RetailTotalBridgeColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RetailTotalLD" msprop:Generator_UserColumnName="RetailTotalLD" msprop:Generator_ColumnPropNameInRow="RetailTotalLD" msprop:Generator_ColumnVarNameInTable="columnRetailTotalLD" msprop:Generator_ColumnPropNameInTable="RetailTotalLDColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RetailTotal" msprop:Generator_UserColumnName="RetailTotal" msprop:Generator_ColumnPropNameInRow="RetailTotal" msprop:Generator_ColumnVarNameInTable="columnRetailTotal" msprop:Generator_ColumnPropNameInTable="RetailTotalColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RetailTotalCredit" msprop:Generator_UserColumnName="RetailTotalCredit" msprop:Generator_ColumnPropNameInRow="RetailTotalCredit" msprop:Generator_ColumnVarNameInTable="columnRetailTotalCredit" msprop:Generator_ColumnPropNameInTable="RetailTotalCreditColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RetailLocalTaxRate" msprop:Generator_UserColumnName="RetailLocalTaxRate" msprop:Generator_ColumnPropNameInRow="RetailLocalTaxRate" msprop:Generator_ColumnVarNameInTable="columnRetailLocalTaxRate" msprop:Generator_ColumnPropNameInTable="RetailLocalTaxRateColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RetailFederalTaxRate" msprop:Generator_UserColumnName="RetailFederalTaxRate" msprop:Generator_ColumnPropNameInRow="RetailFederalTaxRate" msprop:Generator_ColumnVarNameInTable="columnRetailFederalTaxRate" msprop:Generator_ColumnPropNameInTable="RetailFederalTaxRateColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RetailLocalTax" msprop:Generator_UserColumnName="RetailLocalTax" msprop:Generator_ColumnPropNameInRow="RetailLocalTax" msprop:Generator_ColumnVarNameInTable="columnRetailLocalTax" msprop:Generator_ColumnPropNameInTable="RetailLocalTaxColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RetailFederalTax" msprop:Generator_UserColumnName="RetailFederalTax" msprop:Generator_ColumnPropNameInRow="RetailFederalTax" msprop:Generator_ColumnVarNameInTable="columnRetailFederalTax" msprop:Generator_ColumnPropNameInTable="RetailFederalTaxColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RetailTotalTax" msprop:Generator_UserColumnName="RetailTotalTax" msprop:Generator_ColumnPropNameInRow="RetailTotalTax" msprop:Generator_ColumnVarNameInTable="columnRetailTotalTax" msprop:Generator_ColumnPropNameInTable="RetailTotalTaxColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="WSConnectCharge" msprop:Generator_UserColumnName="WSConnectCharge" msprop:Generator_ColumnPropNameInRow="WSConnectCharge" msprop:Generator_ColumnVarNameInTable="columnWSConnectCharge" msprop:Generator_ColumnPropNameInTable="WSConnectChargeColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="WSBridgeRate" msprop:Generator_UserColumnName="WSBridgeRate" msprop:Generator_ColumnPropNameInRow="WSBridgeRate" msprop:Generator_ColumnVarNameInTable="columnWSBridgeRate" msprop:Generator_ColumnPropNameInTable="WSBridgeRateColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="WSLDRate" msprop:Generator_UserColumnName="WSLDRate" msprop:Generator_ColumnPropNameInRow="WSLDRate" msprop:Generator_ColumnVarNameInTable="columnWSLDRate" msprop:Generator_ColumnPropNameInTable="WSLDRateColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="WSCurrency" msprop:Generator_UserColumnName="WSCurrency" msprop:Generator_ColumnPropNameInRow="WSCurrency" msprop:Generator_ColumnVarNameInTable="columnWSCurrency" msprop:Generator_ColumnPropNameInTable="WSCurrencyColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WSBillingInterval" msprop:Generator_UserColumnName="WSBillingInterval" msprop:Generator_ColumnPropNameInRow="WSBillingInterval" msprop:Generator_ColumnVarNameInTable="columnWSBillingInterval" msprop:Generator_ColumnPropNameInTable="WSBillingIntervalColumn" type="xs:int" />
+              <xs:element name="WSTotalConnectCharge" msprop:Generator_UserColumnName="WSTotalConnectCharge" msprop:Generator_ColumnPropNameInRow="WSTotalConnectCharge" msprop:Generator_ColumnVarNameInTable="columnWSTotalConnectCharge" msprop:Generator_ColumnPropNameInTable="WSTotalConnectChargeColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="WSTotalBridge" msprop:Generator_UserColumnName="WSTotalBridge" msprop:Generator_ColumnPropNameInRow="WSTotalBridge" msprop:Generator_ColumnVarNameInTable="columnWSTotalBridge" msprop:Generator_ColumnPropNameInTable="WSTotalBridgeColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="WSTotalLD" msprop:Generator_UserColumnName="WSTotalLD" msprop:Generator_ColumnPropNameInRow="WSTotalLD" msprop:Generator_ColumnVarNameInTable="columnWSTotalLD" msprop:Generator_ColumnPropNameInTable="WSTotalLDColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="WSTotal" msprop:Generator_UserColumnName="WSTotal" msprop:Generator_ColumnPropNameInRow="WSTotal" msprop:Generator_ColumnVarNameInTable="columnWSTotal" msprop:Generator_ColumnPropNameInTable="WSTotalColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="WSLocalTaxRate" msprop:Generator_UserColumnName="WSLocalTaxRate" msprop:Generator_ColumnPropNameInRow="WSLocalTaxRate" msprop:Generator_ColumnVarNameInTable="columnWSLocalTaxRate" msprop:Generator_ColumnPropNameInTable="WSLocalTaxRateColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="WSFederalTaxRate" msprop:Generator_UserColumnName="WSFederalTaxRate" msprop:Generator_ColumnPropNameInRow="WSFederalTaxRate" msprop:Generator_ColumnVarNameInTable="columnWSFederalTaxRate" msprop:Generator_ColumnPropNameInTable="WSFederalTaxRateColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="WSLocalTax" msprop:Generator_UserColumnName="WSLocalTax" msprop:Generator_ColumnPropNameInRow="WSLocalTax" msprop:Generator_ColumnVarNameInTable="columnWSLocalTax" msprop:Generator_ColumnPropNameInTable="WSLocalTaxColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="WSFederalTax" msprop:Generator_UserColumnName="WSFederalTax" msprop:Generator_ColumnPropNameInRow="WSFederalTax" msprop:Generator_ColumnVarNameInTable="columnWSFederalTax" msprop:Generator_ColumnPropNameInTable="WSFederalTaxColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="WSTotalTax" msprop:Generator_UserColumnName="WSTotalTax" msprop:Generator_ColumnPropNameInRow="WSTotalTax" msprop:Generator_ColumnVarNameInTable="columnWSTotalTax" msprop:Generator_ColumnPropNameInTable="WSTotalTaxColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="BillingStatus" msprop:Generator_UserColumnName="BillingStatus" msprop:Generator_ColumnPropNameInRow="BillingStatus" msprop:Generator_ColumnVarNameInTable="columnBillingStatus" msprop:Generator_ColumnPropNameInTable="BillingStatusColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="BilledDate" msprop:Generator_UserColumnName="BilledDate" msprop:Generator_ColumnPropNameInRow="BilledDate" msprop:Generator_ColumnVarNameInTable="columnBilledDate" msprop:Generator_ColumnPropNameInTable="BilledDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ProcessedDate" msprop:Generator_UserColumnName="ProcessedDate" msprop:Generator_ColumnPropNameInRow="ProcessedDate" msprop:Generator_ColumnVarNameInTable="columnProcessedDate" msprop:Generator_ColumnPropNameInTable="ProcessedDateColumn" type="xs:dateTime" />
+              <xs:element name="CallerID" msdata:ReadOnly="true" msprop:Generator_UserColumnName="CallerID" msprop:Generator_ColumnPropNameInRow="CallerID" msprop:Generator_ColumnVarNameInTable="columnCallerID" msprop:Generator_ColumnPropNameInTable="CallerIDColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="65" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:p_RatedCDR_GetCallDetailsForModerator" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
